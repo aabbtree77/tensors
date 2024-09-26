@@ -185,11 +185,11 @@ In addition to magic, a fundamental problem here is that a desire to have a quad
 
 A worthy contender "engine" would be what one would call the "Lie-Rivlin-Spencer-Zhilin" theory, though this is only in my head at the moment. It would be yet another rather long program to build invariant cost functions, by using the same primitives of Shankland, but more frugally. By not relying on the quadratic form operator, going for the cost function directly. It would be harder to engineer spin content though, but it might help to define/automate the primitives. The beginning of the beginning? More kinematic than kinematic?
 
-## How Not to Get Lost in Modern Physics
+## Lost in Modern Physics
 
-I wish I knew. The theory revolves around the Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity.
+A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity.
 
-History and real experiments compress it all naturally. We do not have that many key experiments since Galileo. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable.
+History and real experiments compress it all naturally. We do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
