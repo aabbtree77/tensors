@@ -173,21 +173,23 @@ It is tough to read this literature, and the results seldom justify the complexi
 
 ## Is Shankland's Program Worthy? 
 
-We do not get theorems or new results, only "a kinematic space", there is no dynamics yet. I am thinking of [Apocalypto (2006)](https://www.imdb.com/title/tt0472043/), esp. its ending which is also the new beginning.
+We do not get theorems or new results, only "a kinematic space", there is no dynamics yet. Shankland's work is like the movie called [Apocalypto (2006)](https://www.imdb.com/title/tt0472043/) with its impressive ending which could also be the new beginning. Or not.
 
-As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur $A$ aka a vector potential. We can now apply this to gravity by removing spins 0 and 1 from the symmetric tensor field and get some kind of an apesanteur there too. Maybe even rederive SUGRA projectors. Honestly, I would do this only if someone pressed a gun to my brain.
+As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur $A$ aka a vector potential. We can now apply this to gravity by removing spins 0 and 1 from the symmetric tensor field and get some kind of an apesanteur there too. Maybe even rederive SUGRA's spin projectors. Honestly, I would do this only if someone pressed a gun to my brain.
 
-So a field with tensor/spinor indices and their permutation symmetries in, a Lorentz-invariant operator to build a quadratic form for the field out. With a machinery to engineer (add remove) spin content. Notice that Shankland calls a quadratic form operator "a correlation function" which is probably another use (QFT), albeit little explored.
+So a field with tensor/spinor indices and their permutation symmetries in, a Lorentz-invariant operator to build a quadratic form for the field out. With a machinery to engineer (add remove) spin content. Notice that Shankland calls a quadratic form operator "a correlation function" which is probably another use (QFT). Sadly, this all very little explored and remains in the man's head.
 
 A lot of technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10? 
 
-In addition to magic, a fundamental problem here is that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable. A worthy contender "engine" would be what one would call the "Lie-Rivlin-Spencer-Zhilin" theory, though this is only in my head at the moment. It would be yet another rather long program to build invariant cost functions, by using the same primitives of Shankland, but more frugally. By not relying on the quadratic form operator, going only for the cost function, directly. It would be harder to engineer spin content though. 
+In addition to magic, a fundamental problem here is that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable. The analysis of a model should be optional to the actual model building and simulation. 
+
+A worthy contender "engine" would be what one would call the "Lie-Rivlin-Spencer-Zhilin" theory, though this is only in my head at the moment. It would be yet another rather long program to build invariant cost functions, by using the same primitives of Shankland, but more frugally. By not relying on the quadratic form operator, going for the cost function directly. It would be harder to engineer spin content though, but it might help to define/automate the primitives. The beginning of the beginning? More kinematic than kinematic?
 
 ## How Not to Get Lost in Modern Physics
 
 I wish I knew. The theory revolves around the Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity.
 
-History and real experiments compress it all naturally. We do not have that many key experiments after 400 years since Galileo. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject should remain manageable.
+History and real experiments compress it all naturally. We do not have that many key experiments since Galileo. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
