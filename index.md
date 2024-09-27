@@ -135,7 +135,7 @@ $$
 
 There is no need to know these values when getting the product tables $X_{i}X_{j}$. 
 
-[Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) applies [the Faddeev - LeVerrier algorithm](https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm), or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. [Helmberg and Wagner (1993)](https://core.ac.uk/download/pdf/81192811.pdf). Note also that here we do not have eigenvectors in a traditional sense, they are weighted sums of the basis $X_{i}$, not some matrix columns.
+[Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) applies [the Faddeev - LeVerrier algorithm](https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm), or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. [Helmberg and Wagner (1993)](https://core.ac.uk/download/pdf/81192811.pdf). Here there are no eigenvectors in a traditional sense, they are weighted sums of the basis $X_{i}$, not some matrix columns.
 
 [K.J. Barnes (1963)](https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf) seeks the spectrum differently, with the matrix projection operators.
 
@@ -171,7 +171,7 @@ It is tough to read this literature, and the results may not always justify the 
 
 To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?!) machinery allows to control a spin content of the field, defined as the eigenvalue multiplicities of the general element of the field's algebra. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... **Shankland's system is the only one I can really follow.**
+Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... **Shankland's system is the only one I can really follow!**
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
