@@ -41,12 +41,12 @@
 
 <h2>Tensor Freedom</h2>
 
-<p>A good book on tensors is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus</a> by David C. Kay, but it is still missing a few identities.</p>
+<p>A tensor is anything that transforms like a tensor.</p>
 
 <p><strong>Exercise 1.</strong> Show that tensors allow the following index positioning freedom:</p>
 <p><span class="math display">\[
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
-\]</span></p><p>Hint: Define a tensor as a weighted sum of the Kronecker products of the indicator bases:</p>
+\]</span></p><p>Hint: Define a tensor as a weighted sum of the Kronecker products of the basis vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
@@ -58,6 +58,8 @@ a^{i}\otimes b^{j} &amp;\neq b^{j}\otimes a^{i}\,,\\
 a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 \end{align}
 \]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>.</p>
+
+<p>A good book on tensors is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus</a> by David C. Kay. Sadly, we do not have anything like it written for spinors and Lie groups.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
@@ -73,7 +75,7 @@ X_{4} &amp; = \frac{1}{k^2} k_{\mu} k_{\nu} g^{\rho \sigma}\,, \\
 X_{5} &amp; = \frac{1}{k^4} k_{\mu} k_{\nu} k^{\rho} k^{\sigma}\,, \\
 X_{6} &amp; = \frac{1}{k^2} k_{(\mu} {g_{\nu)}}^{(\rho} k^{\sigma)}\,.
 \end{align}
-\]</span></p><p>Here the division by 4 of the first basis element is not important, but it would turn <span class="math inline">\(X_{1}\)</span> into an index symmetrization operator if one acted with it on any two-index tensor.</p>
+\]</span></p><p>Here the division by 4 of the first basis element is not important, but it turns <span class="math inline">\(X_{1}\)</span> into an index symmetrization operator if one acts with it on any two-index tensor.</p>
 
 <p><strong>Magically, these tensor basis expressions form an algebra under the product defined as</strong></p>
 <p><span class="math display">\[
@@ -135,11 +137,11 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 \end{align}
 \]</span></p><p>There is no need to know these values when getting the product tables <span class="math inline">\(X_{i}X_{j}\)</span>.</p>
 
-<p><a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> applies <a href="https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm">the Faddeev - LeVerrier algorithm</a>, or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. <a href="https://core.ac.uk/download/pdf/81192811.pdf">Helmberg and Wagner (1993)</a>. Note also that here we do not have eigenvectors in a traditional sense, they are the weighted sums of the basis of an abstract algebra <span class="math inline">\(X_{i}\)</span>, not some columns extracted from <span class="math inline">\(X_{i}\)</span>.</p>
+<p><a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> applies <a href="https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm">the Faddeev - LeVerrier algorithm</a>, or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. <a href="https://core.ac.uk/download/pdf/81192811.pdf">Helmberg and Wagner (1993)</a>. Note also that here we do not have eigenvectors in a traditional sense, they are weighted sums of the basis <span class="math inline">\(X_{i}\)</span>, not some matrix columns.</p>
 
 <p><a href="https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf">K.J. Barnes (1963)</a> seeks the spectrum differently, with the matrix projection operators.</p>
 
-<p>Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with &ldquo;t&rdquo;), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition (Lorenz without &ldquo;t&rdquo;).</p>
+<p>Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with &ldquo;t&rdquo;), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition for spin 1 (Lorenz without &ldquo;t&rdquo;).</p>
 
 <p><strong>Exercise 3.</strong> Verify Shankland&rsquo;s spectral results, esp. the case with one vector and one spinor index: &ldquo;&hellip; we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets.&rdquo;</p>
 
@@ -169,28 +171,11 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 
 <p>It is tough to read this literature, and the results may not always justify the complexity.</p>
 
-<h2>Is Shankland&rsquo;s Program Worthy?</h2>
+<h2>Why Shankland?</h2>
 
-<p>To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to control a spin content of the field, defined as eigenvalue multiplicities of the general element of the field&rsquo;s tensor-spinor algebra.</p>
+<p>To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?!) machinery allows to control a spin content of the field, defined as the eigenvalue multiplicities of the general element of the field&rsquo;s algebra. One test of this formalism confirms that removing spin 0 from a vector field leads to &ldquo;apesanteur&rdquo; <span class="math inline">\(A\)</span> aka vector potential.</p>
 
-<p>A major take-away message for me is that removing spin 0 from a vector field leads to &ldquo;apesanteur&rdquo; <span class="math inline">\(A\)</span> aka vector potential. This allows to approach Maxwell formally in line with other spins.</p>
-
-<p>Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin theories, spin projection operators (starting with Weyl, Pauli, Majorana&hellip;) <strong>Shankland&rsquo;s system is the only one I can really follow.</strong></p>
-
-<p>A lot of technical questions are left open. When do various combinations of the primitives form an algebra? Where do these primitives come from? Have we not missed Pauli matrices or the Levi-Civita symbol? How to complete an algebra, verify the basis, dimension? Why is <span class="math inline">\(\gamma_{\mu}p^{\mu}\)</span> treated like an independent quantity when building the vector-spinor basis, effectively doubling the basis dimension from 5 to 10?</p>
-
-<p>The gauge transforms are barely touched. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there.</p>
-
-<p>Finally, note that a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
-A worthy contender could be the &ldquo;Lie-Rivlin-Spencer-Zhilin&rdquo; theory, but it is only in my head at the moment. It would hardly help with a spin content, but it could be less sketchy when deriving Lorentz invariants.</p>
-
-<p>Shankland does not produce much physics, but this is a rare case of a field-theoretic formalism that can be understood with linear algebra. It gives a novel no-nonsense definition of a spin, an invitation to start building some kind of a symbolic engine.</p>
-
-<h2>Lost in Algebra?!</h2>
-
-<p>Going after physics with this much of algebra does not feel right. Physics is at its best when one considers history, real experiments, makes estimates. Experiments compress/predict phenomena much better than any existing formalism or even an engine which we do not really have here. Consider the progress points with light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, <a href="https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process">Breit–Wheeler</a>, <a href="https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment">Pound–Rebka</a>&hellip; Add a dozen more, at least this will be countable, unlike those dry volumes of theory.</p>
-
-<p>However, if you feel a nag about field theory and cannot let it go, Shankland&rsquo;s work may shed that tiny ray of hope.</p>
+<p>Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg&hellip; <strong>Shankland&rsquo;s system is the only one I can really follow.</strong></p>
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>

@@ -6,7 +6,7 @@
 
 ## Tensor Freedom
 
-A good book on tensors is [Schaum's Tensor Calculus](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf) by David C. Kay, but it is still missing a few identities.
+A tensor is anything that transforms like a tensor.
 
 **Exercise 1.** Show that tensors allow the following index positioning freedom:
 
@@ -14,7 +14,7 @@ $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
 $$
 
-Hint: Define a tensor as a weighted sum of the Kronecker products of the indicator bases:
+Hint: Define a tensor as a weighted sum of the Kronecker products of the basis vectors:
 
 $$
 \begin{align}
@@ -33,6 +33,8 @@ $$
 
 It holds for any row-vector $a^{i}$ and column-vector $b_{j}$.
 
+A good book on tensors is [Schaum's Tensor Calculus](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf) by David C. Kay. Sadly, we do not have anything like it written for spinors and Lie groups.
+
 ## Shankland's Tensor Algebras
 
 A problem that ChatGPT cannot solve: Given the [four-vector](https://en.wikipedia.org/wiki/Four-vector) $k_{\mu}$ and [the metric tensor](https://en.wikipedia.org/wiki/Metric_tensor) $g_{\mu\nu}$, write down the most general dimensionless tensor ${T_{\mu\nu}}^{\rho \sigma}$ symmetric under the permutations of the covariant indices $(\mu, \nu)$, and also symmetric w.r.t. the permutations of contravariant indices $(\rho, \sigma)$. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in $k_{\mu}$.
@@ -50,7 +52,7 @@ X_{6} & = \frac{1}{k^2} k_{(\mu} {g_{\nu)}}^{(\rho} k^{\sigma)}\,.
 \end{align}
 $$
 
-Here the division by 4 of the first basis element is not important, but it would turn $X_{1}$ into an index symmetrization operator if one acted with it on any two-index tensor.
+Here the division by 4 of the first basis element is not important, but it turns $X_{1}$ into an index symmetrization operator if one acts with it on any two-index tensor.
 
 **Magically, these tensor basis expressions form an algebra under the product defined as**
 
@@ -133,11 +135,11 @@ $$
 
 There is no need to know these values when getting the product tables $X_{i}X_{j}$. 
 
-[Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) applies [the Faddeev - LeVerrier algorithm](https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm), or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. [Helmberg and Wagner (1993)](https://core.ac.uk/download/pdf/81192811.pdf). Note also that here we do not have eigenvectors in a traditional sense, they are the weighted sums of the basis of an abstract algebra $X_{i}$, not some columns extracted from $X_{i}$. 
+[Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) applies [the Faddeev - LeVerrier algorithm](https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm), or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. [Helmberg and Wagner (1993)](https://core.ac.uk/download/pdf/81192811.pdf). Note also that here we do not have eigenvectors in a traditional sense, they are weighted sums of the basis $X_{i}$, not some matrix columns.
 
 [K.J. Barnes (1963)](https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf) seeks the spectrum differently, with the matrix projection operators.
 
-Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with "t"), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition (Lorenz without "t").
+Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with "t"), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition for spin 1 (Lorenz without "t").
 
 **Exercise 3.** Verify Shankland's spectral results, esp. the case with one vector and one spinor index: "... we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets."
 
@@ -165,28 +167,11 @@ One can find some other mildly successful uses/hints of tensor algebras in [Phys
 
 It is tough to read this literature, and the results may not always justify the complexity.
 
-## Is Shankland's Program Worthy? 
+## Why Shankland?
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to control a spin content of the field, defined as eigenvalue multiplicities of the general element of the field's tensor-spinor algebra.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?!) machinery allows to control a spin content of the field, defined as the eigenvalue multiplicities of the general element of the field's algebra. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-A major take-away message for me is that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential. This allows to approach Maxwell formally in line with other spins. 
-
-Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin theories, spin projection operators (starting with Weyl, Pauli, Majorana...) **Shankland's system is the only one I can really follow.**
-
-A lot of technical questions are left open. When do various combinations of the primitives form an algebra? Where do these primitives come from? Have we not missed Pauli matrices or the Levi-Civita symbol? How to complete an algebra, verify the basis, dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building the vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
-
-The gauge transforms are barely touched. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there. 
-
-Finally, note that a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
-A worthy contender could be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with a spin content, but it could be less sketchy when deriving Lorentz invariants.
-
-Shankland does not produce much physics, but this is a rare case of a field-theoretic formalism that can be understood with linear algebra. It gives a novel no-nonsense definition of a spin, an invitation to start building some kind of a symbolic engine.
-
-## Lost in Algebra?!
-
-Going after physics with this much of algebra does not feel right. Physics is at its best when one considers history, real experiments, makes estimates. Experiments compress/predict phenomena much better than any existing formalism or even an engine which we do not really have here. Consider the progress points with light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, at least this will be countable, unlike those dry volumes of theory.
-
-However, if you feel a nag about field theory and cannot let it go, Shankland's work may shed that tiny ray of hope. 
+Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... **Shankland's system is the only one I can really follow.**
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
