@@ -35,7 +35,7 @@ It holds for any row-vector $a^{i}$ and column-vector $b_{j}$.
 
 ## Shankland's Tensor Algebras
 
-One problem that ChatGPT cannot solve: Given the [four-vector](https://en.wikipedia.org/wiki/Four-vector) $k_{\mu}$ and [the metric tensor](https://en.wikipedia.org/wiki/Metric_tensor) $g_{\mu\nu}$, write down the most general dimensionless tensor ${T_{\mu\nu}}^{\rho \sigma}$ symmetric under the permutations of the covariant indices $(\mu, \nu)$, and also symmetric w.r.t. the permutations of contravariant indices $(\rho, \sigma)$. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in $k_{\mu}$.
+A problem that ChatGPT cannot solve: Given the [four-vector](https://en.wikipedia.org/wiki/Four-vector) $k_{\mu}$ and [the metric tensor](https://en.wikipedia.org/wiki/Metric_tensor) $g_{\mu\nu}$, write down the most general dimensionless tensor ${T_{\mu\nu}}^{\rho \sigma}$ symmetric under the permutations of the covariant indices $(\mu, \nu)$, and also symmetric w.r.t. the permutations of contravariant indices $(\rho, \sigma)$. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in $k_{\mu}$.
 
 [Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) jumps into the answer, which is a linear combination of
 
@@ -143,7 +143,7 @@ Mysteriously, the eigenvalues will have multiplicities which can be deduced inde
 
 Hint:
 
-According to group theory, combining indices means taking "tensor products $(m,n)\otimes (k,l)$ of the Lorentz irreps", clf. Weinberg's QFT, Vol. 1, pages 229-233. What is relevant here is that each such an irrep constitutes a set of subspaces with multiplicities $2s+1$ for $s=|m-n|, |m-n+1|\ldots, m+n$.
+According to group theory, combining indices means taking "tensor products $(m,n)\otimes (k,l)$ of the Lorentz irreps", clf. Weinberg's QFT, Vol. 1, pages 229-233. What is relevant here is that each such an irrep constitutes a set of subspaces with multiplicities $2s+1$ for $s=|m-n|, |m-n+1|,\,\ldots, m+n$.
 
 - $(0,0)$: A scalar. Shankland's singlet: A single subspace with eigenvalue multiplicity $2\cdot 0+1=1$.
 
@@ -161,30 +161,34 @@ It splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinb
 
 ## Other Relevant Algebras
 
-Shankland's construction is one of the most complex calculations that one can build only with the 4-vector $k_{\mu}$ and the metric tensor $g_{\mu\nu}$. However, this is only the beginning ;). 
+Despite a handful of fairly simple primitives ($k_{\mu}$, $g_{\mu\nu}$, $\gamma_{\mu}$), Shankland's construction is cumbersome and sketchy. However, this is only the beginning ;). 
 
 One can find some other mildly successful uses/hints of tensor algebras in [Phys. Rev. 106, 1345 (1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.106.1345); [Nuovo Cimento, 43, 475 (1966)](https://link.springer.com/article/10.1007/BF02752873); [Nuovo Cimento 47, 145 (1967)](https://link.springer.com/article/10.1007/BF02818340); [Phys. Rev. 153, 1652 (1967)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.153.1652); [Phys. Rev. 161, 1631 (1967)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.161.1631); [Phys. Rev. D 8, 2650 (1973)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.8.2650); [Nuovo Cimento 28, 409 (1975)](https://inspirehep.net/literature/98459); [Phys. Lett. B 301 4 339 (1993)](https://arxiv.org/abs/hep-th/9212008); [Phys. Rev. C 64, 015203 (2001)](https://arxiv.org/abs/hep-ph/0103172); [Phys. Rev. D 64, 125013 (2001)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.125013); [Hadronic J. 26, 351 (2003)](https://www.imath.kiev.ua/~nikitin/PAPER26.pdf); [Phys. Rev. D 67, 085021 (2003)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.085021); [Phys. Rev. D 67, 125011 (2003)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.125011); [Nucl. Phys. B724, 453 (2005)](https://arxiv.org/abs/hep-th/0505255); [Phys. Rev. D 74, 084036 (2006)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.084036); [P. Cvitanović (2008)](https://birdtracks.eu/); [V. Monchiet and G. Bonnet (2010)](https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0149); [Phys. Rev. D 97, 115043 (2018)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.115043); [SUGRA and CDC](https://news.stonybrook.edu/facultystaff/qa-with-breakthrough-prize-winner-peter-van-nieuwenhuizen/)...
 
-It is tough to read this literature, and the results may not always justify the complexity...
+It is tough to read this literature, and the results may not always justify the complexity.
 
 ## Is Shankland's Program Worthy? 
 
 To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to engineer (add remove) the spin content of a field.
 
-As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur $A$ aka a vector potential. Spins $\frac{3}{2}$ and $2$ have been developed only with the basis and the product table along with the traces. The interesting part, apesanteurs for these cases, the physics, has not been reached... No doubt these derivations would be cumbersome, and Shankland weighed the odds of finding anything interesting there.
+A major take-away message for me is that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential. This allows to approach Maxwell formally in line with other spins. However, the apparatus is rather heavy, we do not get complete Maxwell's equations, and thinking of $E$ and $B$ is just as good, if not better. Moreover, spins $\frac{3}{2}$ and $2$ have been developed only up to the basis and the product table along with the traces. No physics has been reached. No doubt Shankland weighed the odds of finding anything interesting there and decided not to expend energy in these directions.
 
-Some other technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi-Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
+Steven Weinberg was able to squeeze out a little bit more out these higher spin formalisms by enforcing gauge invariance, only to arrive at Maxwell and Einstein around 1964-1965.
+
+A lot of technical questions are left unanswered. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi-Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
+
+The gauge transforms are barely discussed. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there and not much new per se. 
 
 Finally, note that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
-A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with the spin content, but it might show how to arrive at the primitives such as $g$, $\gamma$ for an arbitrary Lie group.
+A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with the spin content, but it could be less sketchy when deriving Lorentz invariants.
 
 ## Lost in Algebra
 
 A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. How can one compress this cumbersome tensor field formalism into something more viable?
 
-I will be honest. Going after new physics with that much of algebra does not feel right. At least estimate your energy and time to reach something, and do some thinking about the expected results. There is a high chance of not reaching much. We sing heroes, but I suspect the field is full corpses here.
+Going after new physics with this much of algebra does not feel right. At least estimate your energy and time to reach something, and do some thinking about the expected results. There is a high chance of not reaching much in these waters. Fail fast?!
 
-Lately I tend to think that history and real experiments compress it all naturally, but maybe this is an old man speaking. At least we do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any theory of invariant field transformations. 
+Lately I tend to think that history, real experiments, and "the Gamow way" compress physics much better than any existing formalism or even an engine which we do not really have here. Note that there are not that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any formal field theory.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
