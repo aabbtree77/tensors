@@ -161,38 +161,32 @@ It splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinb
 
 ## Other Relevant Algebras
 
-Despite a handful of fairly simple primitives ($k_{\mu}$, $g_{\mu\nu}$, $\gamma_{\mu}$), Shankland's construction is cumbersome and sketchy. However, this is only the beginning ;). 
-
 One can find some other mildly successful uses/hints of tensor algebras in [Phys. Rev. 106, 1345 (1957)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.106.1345); [Nuovo Cimento, 43, 475 (1966)](https://link.springer.com/article/10.1007/BF02752873); [Nuovo Cimento 47, 145 (1967)](https://link.springer.com/article/10.1007/BF02818340); [Phys. Rev. 153, 1652 (1967)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.153.1652); [Phys. Rev. 161, 1631 (1967)](https://journals.aps.org/pr/abstract/10.1103/PhysRev.161.1631); [Phys. Rev. D 8, 2650 (1973)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.8.2650); [Nuovo Cimento 28, 409 (1975)](https://inspirehep.net/literature/98459); [Phys. Lett. B 301 4 339 (1993)](https://arxiv.org/abs/hep-th/9212008); [Phys. Rev. C 64, 015203 (2001)](https://arxiv.org/abs/hep-ph/0103172); [Phys. Rev. D 64, 125013 (2001)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.125013); [Hadronic J. 26, 351 (2003)](https://www.imath.kiev.ua/~nikitin/PAPER26.pdf); [Phys. Rev. D 67, 085021 (2003)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.085021); [Phys. Rev. D 67, 125011 (2003)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.125011); [Nucl. Phys. B724, 453 (2005)](https://arxiv.org/abs/hep-th/0505255); [Phys. Rev. D 74, 084036 (2006)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.084036); [P. Cvitanović (2008)](https://birdtracks.eu/); [V. Monchiet and G. Bonnet (2010)](https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0149); [Phys. Rev. D 97, 115043 (2018)](https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.115043); [SUGRA and CDC](https://news.stonybrook.edu/facultystaff/qa-with-breakthrough-prize-winner-peter-van-nieuwenhuizen/)...
 
 It is tough to read this literature, and the results may not always justify the complexity.
 
 ## Is Shankland's Program Worthy? 
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to engineer (add remove) the spin content of a field.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to control a spin content of the field, defined as eigenvalue multiplicities of the general element of the field's tensor-spinor algebra.
 
-A major take-away message for me is that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential. This allows to approach Maxwell formally in line with other spins. However, the apparatus is rather heavy, we do not get complete Maxwell's equations, and thinking of $E$ and $B$ is just as good, if not better. Moreover, spins $\frac{3}{2}$ and $2$ have been developed only up to the basis and the product table along with the traces. No physics has been reached. No doubt Shankland weighed the odds of finding anything interesting there and decided not to expend energy in these directions.
+A major take-away message for me is that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential. This allows to approach Maxwell formally in line with other spins. 
 
-Steven Weinberg was able to squeeze a little bit more out these higher spin formalisms by enforcing gauge invariance, only to arrive at Maxwell and Einstein around 1964-1965.
+Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin theories, spin projection operators (starting with Weyl, Pauli, Majorana...) **Shankland's system is the only one I can really follow.**
 
-A lot of technical questions are left unanswered. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed Pauli matrices or the Levi-Civita symbol? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
+A lot of technical questions are left open. When do various combinations of the primitives form an algebra? Where do these primitives come from? Have we not missed Pauli matrices or the Levi-Civita symbol? How to complete an algebra, verify the basis, dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building the vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
 
-The gauge transforms are barely discussed. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there and not much new per se. 
+The gauge transforms are barely touched. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there. 
 
-Finally, note that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
-A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with the spin content, but it could be less sketchy when deriving Lorentz invariants.
+Finally, note that a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
+A worthy contender could be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with a spin content, but it could be less sketchy when deriving Lorentz invariants.
 
-## Lost in Algebra
+Shankland does not produce much physics, but this is a rare case of a field-theoretic formalism that can be understood with linear algebra. It gives a novel no-nonsense definition of a spin, an invitation to start building some kind of a symbolic engine.
 
-A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. How can one compress this cumbersome tensor field language into something more viable?
+## Lost in Algebra?!
 
-Going after physics with this much of algebra does not feel right. There is a too high chance of not reaching a coast in these waters. Fail fast.
+Going after physics with this much of algebra does not feel right. Physics is at its best when one considers history, real experiments, makes estimates. Experiments compress/predict phenomena much better than any existing formalism or even an engine which we do not really have here. Consider the progress points with light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, at least this will be countable, unlike those dry volumes of theory.
 
-Lately I tend to think that history, real experiments, and "Gamow's erroneous estimates" compress/predict phenomena much better than any existing formalism or even an engine which we do not really have here. Note that there are not that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any formal field theory. 
-
-So this is all wrong. Avoid algebra, keep it visual, emphasize magic.
-
-Status: Abandoned.
+However, if you feel a nag about field theory and cannot let it go, Shankland's work may shed that tiny ray of hope. 
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
