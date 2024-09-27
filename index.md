@@ -173,9 +173,9 @@ To sum up, we are given a field with tensor/spinor indices and their permutation
 
 A major take-away message for me is that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential. This allows to approach Maxwell formally in line with other spins. However, the apparatus is rather heavy, we do not get complete Maxwell's equations, and thinking of $E$ and $B$ is just as good, if not better. Moreover, spins $\frac{3}{2}$ and $2$ have been developed only up to the basis and the product table along with the traces. No physics has been reached. No doubt Shankland weighed the odds of finding anything interesting there and decided not to expend energy in these directions.
 
-Steven Weinberg was able to squeeze out a little bit more out these higher spin formalisms by enforcing gauge invariance, only to arrive at Maxwell and Einstein around 1964-1965.
+Steven Weinberg was able to squeeze a little bit more out these higher spin formalisms by enforcing gauge invariance, only to arrive at Maxwell and Einstein around 1964-1965.
 
-A lot of technical questions are left unanswered. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi-Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
+A lot of technical questions are left unanswered. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed Pauli matrices or the Levi-Civita symbol? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
 
 The gauge transforms are barely discussed. They have been made somewhat digestible by Donald H. Kobe in his AJP papers, but there is no unification with spin there and not much new per se. 
 
@@ -184,11 +184,15 @@ A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is on
 
 ## Lost in Algebra
 
-A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. How can one compress this cumbersome tensor field formalism into something more viable?
+A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. How can one compress this cumbersome tensor field language into something more viable?
 
-Going after new physics with this much of algebra does not feel right. At least estimate your energy and time to reach something, and do some thinking about the expected results. There is a high chance of not reaching much in these waters. Fail fast?!
+Going after physics with this much of algebra does not feel right. There is a too high chance of not reaching a coast in these waters. Fail fast.
 
-Lately I tend to think that history, real experiments, and "the Gamow way" compress physics much better than any existing formalism or even an engine which we do not really have here. Note that there are not that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any formal field theory.
+Lately I tend to think that history, real experiments, and "Gamow's erroneous estimates" compress/predict phenomena much better than any existing formalism or even an engine which we do not really have here. Note that there are not that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any formal field theory. 
+
+So this is all wrong. Avoid algebra, keep it visual, emphasize magic.
+
+Status: Abandoned.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
