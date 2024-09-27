@@ -1,10 +1,8 @@
 <div style="text-align:center; font-size: 2.5rem; margin-top: 3rem; margin-bottom: 1.6rem;"> 
-    <div style="font-size: 2rem; margin-top: 2rem; margin-bottom: 2rem;">The Algebra of a Tensor Field</div>
+    <div style="font-size: 2rem; margin-top: 2rem; margin-bottom: 2rem;">Notes on <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a></div>
     <a style="font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;" href="https://aabbtree77.github.io/">Ramūnas Girdziušas</a>
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: September 26, 2024</div>
 </div>
-
-These are my notes taken while reading [Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018).
 
 ## Tensor Freedom
 
@@ -153,13 +151,13 @@ According to group theory, combining indices means taking "tensor products $(m,n
 
 - $(\frac{1}{2},0)\oplus (0,\frac{1}{2})$: A full single spinor index. Shankland's doublet and its antidoublet: $\frac{1}{2},  \frac{1}{2}$ subspaces with multiplicites $2$ and $2$.
 
-- $(1,1)$: Two symmetric tensor indices. A mismatch with Shankland's pentuplet, triplet, and two singlets: Subspaces $0, 1, 2$ with multiplicities $1$, $3$, and $5$. Where is the missing singlet? In a symmetric two-index tensor case, to remove a singlet also means to make the tensor traceless, so the group theory still matches Shankland under the assumption of **tracelessness**.
+- $(1,1)$: Two symmetric tensor indices. A mismatch with Shankland's pentuplet, triplet, and two singlets: Subspaces $0, 1, 2$ with multiplicities $1$, $3$, and $5$. Where is the missing singlet? In a symmetric two-index tensor case, to remove a singlet also means to make the tensor traceless, so the group theory still matches Shankland with this assumption.
 
 - $(1,0)\oplus (0,1)$: Two asymmetric tensor indices. Shankland's two particle triplets: Subspaces $1$ and $1$ with the multiplicities $3$ and $3$.
 
 - $(\frac{1}{2},\frac{1}{2}) \otimes \Big((\frac{1}{2},0)\oplus (0,\frac{1}{2})\Big)$, i.e. combining a vector and a spinor index?
 
-It splits into a vector and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. Thus, we obtain the subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities $2$ and $4$, along with the "antisubspace". This is twice fewer doublets than calculated by Shankland. 
+It splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities $2$ and $4$, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
 
 ## Other Relevant Algebras
 
@@ -171,25 +169,26 @@ It is tough to read this literature, and the results may not always justify the 
 
 ## Is Shankland's Program Worthy? 
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. Shankland shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to engineer (add remove) the spin content of a field.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to engineer (add remove) the spin content of a field.
 
 As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur $A$ aka a vector potential. Spins $\frac{3}{2}$ and $2$ have been developed only with the basis and the product table along with the traces. The interesting part, apesanteurs for these cases, the physics, has not been reached... No doubt these derivations would be cumbersome, and Shankland weighed the odds of finding anything interesting there.
 
-Some other technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10? 
-
-There is also quite some magic which lacks proofs, hard-to-find references, and a lot of original motivation and context which sadly remained in the authors head. 
+Some other technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as $k$, $g$, $\gamma$ would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi-Civita symbol [$\epsilon$](https://en.wikipedia.org/wiki/Levi-Civita_symbol)? How to complete an algebra, verify the basis dimension? Why is $\gamma_{\mu}p^{\mu}$ treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?
 
 Finally, note that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
-A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with the spin content, but it might show how to one arrives at the primitives such as $g$, $\gamma$ for an arbitrary Lie group.
+A worthy contender would be the "Lie-Rivlin-Spencer-Zhilin" theory, but it is only in my head at the moment. It would hardly help with the spin content, but it might show how to arrive at the primitives such as $g$, $\gamma$ for an arbitrary Lie group.
 
 ## Lost in Algebra
 
-A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. It does not look like we have a formalism which can achieve adequate compression of knowledge.
+A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg's three volumes of QFT, and his two volumes of classical gravity. How can one compress this cumbersome tensor field formalism into something more viable?
 
-History and real experiments compress it all naturally. We do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike the theory of invariant field transformations...
+I will be honest. Going after new physics with that much of algebra does not feel right. At least estimate your energy and time to reach something, and do some thinking about the expected results. There is a high chance of not reaching much. We sing heroes, but I suspect the field is full corpses here.
+
+Lately I tend to think that history and real experiments compress it all naturally, but maybe this is an old man speaking. At least we do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, [Breit–Wheeler](https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process), [Pound–Rebka](https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment)... Add a dozen more, the subject will still be manageable, unlike any theory of invariant field transformations. 
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
+<br><br>
 <a href="https://voi.id/en/memori/185165">
 <img src="imgs/IronMike-min-rs.png" title="Iron Mike" width="60%">
 </a>
