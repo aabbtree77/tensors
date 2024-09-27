@@ -39,33 +39,31 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: September 26, 2024</div>
 </div>
 
-<p>These are my notes about physics, tensor fields, spin. Taken while reading <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a>.</p>
+<p>These are my notes taken while reading <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a>.</p>
 
 <h2>Tensor Freedom</h2>
 
-<p>A good book on tensors is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus</a> by David C. Kay. The only problem is that it goes to the analysis prematurely, like all the textbooks on this subject. I will fill in a few details that are generally missing related to tensor index positioning, tensor algebra, group theory.</p>
-
-<p>One difficulty of life is that tensors and differential geometry are incomplete. We need to bring in spinors and group theory which add a lot of complexity to what is already quite complex. Expect &ldquo;language within a language&rdquo; type of problems, and constant fog with questions such as &ldquo;is this a number or a matrix&rdquo;, &ldquo;what is the size of x&rdquo;, &ldquo;is it complex or real&rdquo;.</p>
+<p>A good book on tensors is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus</a> by David C. Kay, but it is still missing a few identities.</p>
 
 <p><strong>Exercise 1.</strong> Show that tensors allow the following index positioning freedom:</p>
 <p><span class="math display">\[
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
-\]</span></p><p>Hint: Define a tensor as a weighted sum of the Kronecker products of the indicator bases such as</p>
+\]</span></p><p>Hint: Define a tensor as a weighted sum of the Kronecker products of the indicator bases:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
-\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a unit row-vector, and <span class="math inline">\(e_{k}\)</span> is a unit column-vector. Notice <a href="https://en.wikipedia.org/wiki/Kronecker_product">the Kronecker product</a> <span class="math inline">\(\otimes\)</span> property:</p>
+\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a unit row-vector, and <span class="math inline">\(e_{k}\)</span> is a unit column-vector. Note the property:</p>
 <p><span class="math display">\[
 \begin{align}
 a^{i}\otimes b^{j} &amp;\neq b^{j}\otimes a^{i}\,,\\
 a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 \end{align}
-\]</span></p><p>for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(a^{j}\)</span>.</p>
+\]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
-<p>An archetypical problem that ChatGPT cannot solve: Given the <a href="https://en.wikipedia.org/wiki/Four-vector">four-vector</a> <span class="math inline">\(k_{\mu}\)</span> and <a href="https://en.wikipedia.org/wiki/Metric_tensor">the metric tensor</a> <span class="math inline">\(g_{\mu\nu}\)</span>, write down the most general dimensionless tensor <span class="math inline">\({T_{\mu\nu}}^{\rho \sigma}\)</span> symmetric under the permutations of the covariant indices <span class="math inline">\((\mu, \nu)\)</span>, and also symmetric w.r.t. the permutations of contravariant indices <span class="math inline">\((\rho, \sigma)\)</span>. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in <span class="math inline">\(k_{\mu}\)</span>.</p>
+<p>One problem that ChatGPT cannot solve: Given the <a href="https://en.wikipedia.org/wiki/Four-vector">four-vector</a> <span class="math inline">\(k_{\mu}\)</span> and <a href="https://en.wikipedia.org/wiki/Metric_tensor">the metric tensor</a> <span class="math inline">\(g_{\mu\nu}\)</span>, write down the most general dimensionless tensor <span class="math inline">\({T_{\mu\nu}}^{\rho \sigma}\)</span> symmetric under the permutations of the covariant indices <span class="math inline">\((\mu, \nu)\)</span>, and also symmetric w.r.t. the permutations of contravariant indices <span class="math inline">\((\rho, \sigma)\)</span>. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in <span class="math inline">\(k_{\mu}\)</span>.</p>
 
 <p><a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> jumps into the answer, which is a linear combination of</p>
 <p><span class="math display">\[
@@ -122,14 +120,14 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 
 <h2>The Spectrum of a Tensor Field</h2>
 
-<p>The products <span class="math inline">\(X_{i}X_{j}\)</span> and the traces <span class="math inline">\(X_{i}\)</span> determine the spectrum or the particle content of a tensor field. Shankland does not define a tensor field, but it is assumed that <span class="math inline">\(X_{i}\)</span> will be an operator applied to build a quadratic form for a field, where <span class="math inline">\(k_{i}\)</span> becomes a four-nabla. The PhD thesis of <a href="https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf">K.J. Barnes (1963)</a> sheds more light here, but his notation requires getting used to.</p>
+<p>The products <span class="math inline">\(X_{i}X_{j}\)</span> and the traces <span class="math inline">\(\textit{tr} X_{i}\)</span> determine the spectrum of the algebra. Shankland does not define a tensor field, but it is assumed that <span class="math inline">\(X_{i}\)</span> will form an operator applied to build a quadratic form for a field, where <span class="math inline">\(k_{i}\)</span> becomes a four-nabla. The PhD thesis of <a href="https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf">K.J. Barnes (1963)</a> sheds more light here, but his notation requires getting used to.</p>
 
 <p>The traces are defined as</p>
 <p><span class="math display">\[
 \begin{align}
-\textit{tr}\,{X_{\mu \nu}}^{\rho \sigma}  \equiv {X_{\mu \nu}}^{\mu \nu}\,,
+\textit{tr}\,{X_{\mu \nu}}^{\rho \sigma}  \equiv {X_{\mu \nu}}^{\mu \nu}\,.
 \end{align}
-\]</span></p><p>and they demand the knowledge of the metric tensor <span class="math inline">\(g_{ij}\)</span> with the mixed tensor</p>
+\]</span></p><p>They demand the values of the metric tensor <span class="math inline">\(g_{ij}\)</span>, along with the mixed tensor</p>
 <p><span class="math display">\[
 \begin{align}
 {g_{i}}^{j}={\delta_{i}}^{j}=\begin{cases}
@@ -139,11 +137,11 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 \end{align}
 \]</span></p><p>There is no need to know these values when getting the product tables <span class="math inline">\(X_{i}X_{j}\)</span>.</p>
 
-<p><a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> applies <a href="https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm">the Faddeev - LeVerrier algorithm</a>, or rather its highly advanced variant extended to tackle multiple eigenvalues, see e.g. <a href="https://core.ac.uk/download/pdf/81192811.pdf">Helmberg and Wagner (1993)</a>. Note also that here we do not have eigenvectors in a traditional sense, they are the weighted sums of the basis of an abstract algebra <span class="math inline">\(X_{i}\)</span>, not some columns extracted from <span class="math inline">\(X_{i}\)</span>.</p>
+<p><a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> applies <a href="https://en.wikipedia.org/wiki/Faddeev%E2%80%93LeVerrier_algorithm">the Faddeev - LeVerrier algorithm</a>, or rather its advanced variant extended to tackle multiple eigenvalues, see e.g. <a href="https://core.ac.uk/download/pdf/81192811.pdf">Helmberg and Wagner (1993)</a>. Note also that here we do not have eigenvectors in a traditional sense, they are the weighted sums of the basis of an abstract algebra <span class="math inline">\(X_{i}\)</span>, not some columns extracted from <span class="math inline">\(X_{i}\)</span>.</p>
 
 <p><a href="https://spiral.imperial.ac.uk/bitstream/10044/1/13413/2/Barnes-KJ-1963-PhD-Thesis.pdf">K.J. Barnes (1963)</a> seeks the spectrum differently, with the matrix projection operators.</p>
 
-<p>Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with &ldquo;t&rdquo;), without any iterations and polynomial equations. The group theory, however, won&rsquo;t get us to the eigenvector equations leading to the Lorenz gauge condition (Lorenz without &ldquo;t&rdquo;).</p>
+<p>Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with &ldquo;t&rdquo;), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition (Lorenz without &ldquo;t&rdquo;).</p>
 
 <p><strong>Exercise 3.</strong> Verify Shankland&rsquo;s spectral results, esp. the case with one vector and one spinor index: &ldquo;&hellip; we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets.&rdquo;</p>
 
@@ -167,33 +165,32 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 
 <p>It splits into a vector and <span class="math inline">\((1,\frac{1}{2}) \oplus (\frac{1}{2},1)\)</span>, clf. Weinberg&rsquo;s QFT, Vol. 1, page 232. Thus, we obtain the subspaces <span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(\frac{3}{2}\)</span> with multiplicities <span class="math inline">\(2\)</span> and <span class="math inline">\(4\)</span>, along with the &ldquo;antisubspace&rdquo;. This is twice fewer doublets than calculated by Shankland.</p>
 
-<h2>More Tensor Charades</h2>
+<h2>Other Relevant Algebras</h2>
 
-<p>Shankland&rsquo;s construction is one of the most complex calculations that one can build only with the 4-vector <span class="math inline">\(k_{\mu}\)</span> and the metric tensor <span class="math inline">\(g_{\mu\nu}\)</span>. Add to this the gamma matrices <span class="math inline">\(\gamma_{\mu}\)</span>, and you will be amused how much complexity a human can create in a domain which deals with regular low-dimensional objects in a spherical vacuum. And this complexity is only the beginning ;).</p>
+<p>Shankland&rsquo;s construction is one of the most complex calculations that one can build only with the 4-vector <span class="math inline">\(k_{\mu}\)</span> and the metric tensor <span class="math inline">\(g_{\mu\nu}\)</span>. However, this is only the beginning ;).</p>
 
 <p>One can find some other mildly successful uses/hints of tensor algebras in <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.106.1345">Phys. Rev. 106, 1345 (1957)</a>; <a href="https://link.springer.com/article/10.1007/BF02752873">Nuovo Cimento, 43, 475 (1966)</a>; <a href="https://link.springer.com/article/10.1007/BF02818340">Nuovo Cimento 47, 145 (1967)</a>; <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.153.1652">Phys. Rev. 153, 1652 (1967)</a>; <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.161.1631">Phys. Rev. 161, 1631 (1967)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.8.2650">Phys. Rev. D 8, 2650 (1973)</a>; <a href="https://inspirehep.net/literature/98459">Nuovo Cimento 28, 409 (1975)</a>; <a href="https://arxiv.org/abs/hep-th/9212008">Phys. Lett. B 301 4 339 (1993)</a>; <a href="https://arxiv.org/abs/hep-ph/0103172">Phys. Rev. C 64, 015203 (2001)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.64.125013">Phys. Rev. D 64, 125013 (2001)</a>; <a href="https://www.imath.kiev.ua/~nikitin/PAPER26.pdf">Hadronic J. 26, 351 (2003)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.085021">Phys. Rev. D 67, 085021 (2003)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.67.125011">Phys. Rev. D 67, 125011 (2003)</a>; <a href="https://arxiv.org/abs/hep-th/0505255">Nucl. Phys. B724, 453 (2005)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.74.084036">Phys. Rev. D 74, 084036 (2006)</a>; <a href="https://birdtracks.eu/">P. Cvitanović (2008)</a>; <a href="https://royalsocietypublishing.org/doi/10.1098/rspa.2010.0149">V. Monchiet and G. Bonnet (2010)</a>; <a href="https://journals.aps.org/prd/abstract/10.1103/PhysRevD.97.115043">Phys. Rev. D 97, 115043 (2018)</a>; <a href="https://news.stonybrook.edu/facultystaff/qa-with-breakthrough-prize-winner-peter-van-nieuwenhuizen/">SUGRA and CDC</a>&hellip;</p>
 
-<p>It is tough to read this literature, and the results seldom justify the complexity. Note that Shankland&rsquo;s paper is hardly known. It is not in Phys Rev spaces, the AAPT community has not dissected it inside out like it would do with anything touching Maxwell.</p>
+<p>It is tough to read this literature, and the results may not always justify the complexity&hellip;</p>
 
 <h2>Is Shankland&rsquo;s Program Worthy?</h2>
 
-<p>We do not get theorems or new results, only &ldquo;a kinematic space&rdquo;, there is no dynamics yet. Shankland&rsquo;s work is like the movie called <a href="https://www.imdb.com/title/tt0472043/">Apocalypto (2006)</a> with its impressive ending which could also be the new beginning. Or not.</p>
+<p>To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. Shankland shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?) machinery also allows to engineer (add remove) the spin content of a field.</p>
 
-<p>As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur <span class="math inline">\(A\)</span> aka a vector potential. We can now apply this to gravity by removing spins 0 and 1 from the symmetric tensor field and get some kind of an apesanteur there too. Maybe even rederive SUGRA&rsquo;s spin projectors. Honestly, I would do this only if someone pressed a gun to my brain.</p>
+<p>As a concrete example, Shankland shows how removing spin 0 from a vector field leads to apesanteur <span class="math inline">\(A\)</span> aka a vector potential. Spins <span class="math inline">\(\frac{3}{2}\)</span> and <span class="math inline">\(2\)</span> have been developed only with the basis and the product table along with the traces. The interesting part, apesanteurs for these cases, the physics, has not been reached&hellip; No doubt these derivations would be cumbersome, and Shankland weighed the odds of finding anything interesting there.</p>
 
-<p>So a field with tensor/spinor indices and their permutation symmetries in, a Lorentz-invariant operator to build a quadratic form for the field out. With a machinery to engineer (add remove) spin content. Notice that Shankland calls a quadratic form operator &ldquo;a correlation function&rdquo; which is probably another use (QFT). Sadly, this all very little explored and remains in the man&rsquo;s head.</p>
+<p>Some other technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as <span class="math inline">\(k\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(\gamma\)</span> would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi Civita symbol <a href="https://en.wikipedia.org/wiki/Levi-Civita_symbol"><span class="math inline">\(\epsilon\)</span></a>? How to complete an algebra, verify the basis dimension? Why is <span class="math inline">\(\gamma_{\mu}p^{\mu}\)</span> treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?</p>
 
-<p>A lot of technical questions are left unanswered. The gauge transforms are barely discussed. When and why do the combinations of the primitives such as <span class="math inline">\(k\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(\gamma\)</span> would form an algebra? Where do these primitives come from for an arbitrary Lie group/algebra? Have we not missed the Pauli matrix or the Levi Civita symbol <a href="https://en.wikipedia.org/wiki/Levi-Civita_symbol"><span class="math inline">\(\epsilon\)</span></a>? How to complete an algebra, verify the basis dimension? Why is <span class="math inline">\(\gamma_{\mu}p^{\mu}\)</span> treated like an independent quantity when building a vector-spinor basis, effectively doubling the basis dimension from 5 to 10?</p>
+<p>There is also quite some magic which lacks proofs, hard-to-find references, and a lot of original motivation and context which sadly remained in the authors head.</p>
 
-<p>In addition to magic, a fundamental problem here is that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable. The analysis of a model should be optional to the actual model building and simulation.</p>
+<p>Finally, note that a desire to have a quadratic form/matrix/correlation doubles all the indices, but this complexity might be avoidable.
+A worthy contender would be the &ldquo;Lie-Rivlin-Spencer-Zhilin&rdquo; theory, but it is only in my head at the moment. It would hardly help with the spin content, but it might show how to one arrives at the primitives such as <span class="math inline">\(g\)</span>, <span class="math inline">\(\gamma\)</span> for an arbitrary Lie group.</p>
 
-<p>A worthy contender &ldquo;engine&rdquo; would be what one would call the &ldquo;Lie-Rivlin-Spencer-Zhilin&rdquo; theory, though this is only in my head at the moment. It would be yet another rather long program to build invariant cost functions, by using the same primitives of Shankland, but more frugally. By not relying on the quadratic form operator, going for the cost function directly. It would be harder to engineer spin content though, but it might help to define/automate the primitives. The beginning of the beginning? More kinematic than kinematic?</p>
+<h2>Lost in Algebra</h2>
 
-<h2>Lost in Modern Physics</h2>
+<p>A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg&rsquo;s three volumes of QFT, and his two volumes of classical gravity. It does not look like we have a formalism which can achieve adequate compression of knowledge.</p>
 
-<p>A physical theory centers on Lorentz, PCT, and gauge transformations. This does not sound much until one encounters Weinberg&rsquo;s three volumes of QFT, and his two volumes of classical gravity.</p>
-
-<p>History and real experiments compress it all naturally. We do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, <a href="https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process">Breit–Wheeler</a>, <a href="https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment">Pound–Rebka</a>&hellip; Add a dozen more, the subject will still be manageable.</p>
+<p>History and real experiments compress it all naturally. We do not have that many key experiments since Galilei. Consider light: Newton, Fresnel-Arago, Hertz, Lebedev, Compton, <a href="https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process">Breit–Wheeler</a>, <a href="https://en.wikipedia.org/wiki/Pound%E2%80%93Rebka_experiment">Pound–Rebka</a>&hellip; Add a dozen more, the subject will still be manageable, unlike the theory of invariant field transformations&hellip;</p>
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
