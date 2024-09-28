@@ -149,17 +149,19 @@ According to group theory, combining indices means taking "tensor products $(m,n
 
 - $(0,0)$: A scalar. Shankland's singlet: A single subspace with eigenvalue multiplicity $2\cdot 0+1=1$.
 
-- $(\frac{1}{2},\frac{1}{2})$: A single four-vector index. Shankland's singlet and triplet: two subspaces $0, 1$ with their multiplicities $1$ and $3$.
+- $(\frac{1}{2},\frac{1}{2})$: A single four-vector index. Shankland's singlet and triplet: two subspaces $0, 1$ with multiplicities 1 and 3.
 
-- $(\frac{1}{2},0)\oplus (0,\frac{1}{2})$: A full single spinor index. Shankland's doublet and its antidoublet: $\frac{1}{2},  \frac{1}{2}$ subspaces with multiplicites $2$ and $2$.
+- $(\frac{1}{2},0)\oplus (0,\frac{1}{2})$: A full single spinor index. Shankland's doublet and its antidoublet: $\frac{1}{2},  \frac{1}{2}$ subspaces with multiplicites 2 and 2.
 
-- $(1,1)$: Two symmetric tensor indices. A mismatch with Shankland's pentuplet, triplet, and two singlets: Subspaces $0, 1, 2$ with multiplicities $1$, $3$, and $5$. Where is the missing singlet? In a symmetric two-index tensor case, to remove a singlet also means to make the tensor traceless, so the group theory still matches Shankland with this assumption.
+- $(1,1)$: Two symmetric tensor indices. A mismatch with Shankland's pentuplet, triplet, and two singlets: Subspaces $0, 1, 2$ with multiplicities 1, 3, and 5. Where is the missing singlet? In a symmetric two-index tensor case, to remove a singlet also means to make the tensor traceless, so the group theory still matches Shankland with this assumption.
 
-- $(1,0)\oplus (0,1)$: Two asymmetric tensor indices. Shankland's two particle triplets: Subspaces $1$ and $1$ with the multiplicities $3$ and $3$.
+- $(1,0)\oplus (0,1)$: Two asymmetric tensor indices. Shankland's two particle triplets: Subspaces $1$ and $1$ with multiplicities 3 and 3.
 
 - $(\frac{1}{2},\frac{1}{2}) \otimes \Big((\frac{1}{2},0)\oplus (0,\frac{1}{2})\Big)$, i.e. combining a vector and a spinor index?
 
-It splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities $2$ and $4$, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
+The last case, spin $\frac{3}{2})$, splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities 2 and 4, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
+
+Note that the construction of algebras is skipped, but it is not trivial. For spin $\frac{3}{2})$ Shankland had to spot that $\gamma_{\mu}p^{\mu}$ acts as a primitive which is independent of $p$, $\gamma$, and $g$. This has effectively doubled the basis dimension of the vector-spinor algebra from 5 to 10.
 
 ## Other Relevant Algebras
 
@@ -169,9 +171,9 @@ It is tough to read this literature, and the results may not always justify the 
 
 ## Why Shankland?
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. The author shows how to build a Lorentz-invariant operator which may serve as a quadratic form for the field. The invented (discovered?!) machinery allows to control a spin content of the field, defined as the eigenvalue multiplicities of the general element of the field's algebra. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form for the field, which in turn may serve later in building invariant physics. A spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-Considering a massive literature around group theory, irreducible representations, angular momentum, higher spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... **Shankland's system is the only one I can really follow!**
+Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, and Weinberg... Shankland's system is the closest thing to the assembly language of nature.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
