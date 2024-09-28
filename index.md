@@ -161,7 +161,7 @@ According to group theory, combining indices means taking "tensor products $(m,n
 
 The last case, spin $\frac{3}{2})$, splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities 2 and 4, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
 
-Note that the construction of algebras is skipped, but it is not trivial. For spin $\frac{3}{2})$ Shankland had to spot that $\gamma_{\mu}p^{\mu}$ acts as a primitive which is independent of $p$, $\gamma$, and $g$. This has effectively doubled the basis dimension of the vector-spinor algebra from 5 to 10.
+Note that the construction of algebras is skipped, but it is not trivial. For spin $\frac{3}{2}$, Shankland had to spot that the combination $\gamma_{\mu}p^{\mu}$ acted independently of $p$, $\gamma$, and $g$. This has effectively doubled the basis dimension of the vector-spinor algebra from 5 to 10.
 
 ## Other Relevant Algebras
 
