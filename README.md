@@ -1,8 +1,12 @@
+> "The narrowest path is always the holiest." 
+>
+> — *Depeche Mode, 1993* 
+
 # Introduction
 
 These are my notes taken while reading [Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018).
 
-Keywords: theoretical physics, tensor field, tensor algebra, spin, spinor, Weinberg. 
+Keywords: theoretical physics, tensor field, tensor algebra, spin, spinor, Lie group, Donn G. Shankland, Steven Weinberg. 
 
 # Setup
 
