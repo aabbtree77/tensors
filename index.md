@@ -1,20 +1,40 @@
 <div style="text-align:center; font-size: 2.5rem; margin-top: 3rem; margin-bottom: 1.6rem;"> 
     <div style="font-size: 2rem; margin-top: 2rem; margin-bottom: 2rem;">Notes on <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a></div>
     <a style="font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem;" href="https://aabbtree77.github.io/">Ramūnas Girdziušas</a>
-    <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: September 26, 2024</div>
+    <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
 ## Tensor Freedom
 
-A tensor is anything that transforms like a tensor.
+Tensors are confusing because there are multiple related inequivalent definitions:
 
-**Exercise 1.** Show that tensors allow the following index positioning freedom:
+* A vector of tensor product (dual) spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). The key property is that
+
+    $$
+    X{^i}{^j}{_k} \neq X{^i}{_k}{^j} \neq X{_k}{^i}{^j}.
+    $$
+
+    This approach tries to reduce tensors to linear algebra, but does not go very far.
+
+* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The placement of indices is less stringent:
+
+    $$
+    X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j} = X^{ij}_{k}.
+    $$
+
+    This is a historical approach, rushes to Riemann geometry and analysis while missing tensor algebras and invariants. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility which remains a rather obscure subject to me.
+
+* A symbolic expression derived by combining "primitives" which themselves may not be tensors (though they often are), e.g. the 4-vector $k$, the metric tensor $g$, the Levi-Civita symbol $\epsilon$, the Pauli matrices $\sigma$, the gamma matrices $\gamma$, the Dirac spinor $p$... The books by [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
+
+To confuse one even further, consider the following exercise which comes from my thinking about how to connect the first two approaches. It leads to multidimensional arrays represented as matrices. This is somewhat disconnected from the big ideas above, but it shows how the index positioning freedom may arise.
+
+**Exercise 1.** Define the tensor product (dual) space which does allow the index positioning freedom:
 
 $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
 $$
 
-Hint: Define a tensor as a weighted sum of the Kronecker products of the basis vectors:
+Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
 
 $$
 \begin{align}
@@ -31,13 +51,11 @@ a^{i}\otimes b_{j} &= b_{j}\otimes a^{i}\,.
 \end{align}
 $$
 
-It holds for any row-vector $a^{i}$ and column-vector $b_{j}$.
-
-A good book on tensors is [Schaum's Tensor Calculus](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf) by David C. Kay. Sadly, we do not have anything like it written for spinors and Lie groups.
+It holds for any row-vector $a^{i}$ and column-vector $b_{j}$. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.
 
 ## Shankland's Tensor Algebras
 
-A problem that ChatGPT cannot solve: Given the [four-vector](https://en.wikipedia.org/wiki/Four-vector) $k_{\mu}$ and [the metric tensor](https://en.wikipedia.org/wiki/Metric_tensor) $g_{\mu\nu}$, write down the most general dimensionless tensor ${T_{\mu\nu}}^{\rho \sigma}$ symmetric under the permutations of the covariant indices $(\mu, \nu)$, and also symmetric w.r.t. the permutations of contravariant indices $(\rho, \sigma)$. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in $k_{\mu}$.
+A problem that ChatGPT-alikes still cannot solve in 2025: Given the [four-vector](https://en.wikipedia.org/wiki/Four-vector) $k_{\mu}$ and [the metric tensor](https://en.wikipedia.org/wiki/Metric_tensor) $g_{\mu\nu}$, write down the most general dimensionless tensor ${T_{\mu\nu}}^{\rho \sigma}$ symmetric under the permutations of the covariant indices $(\mu, \nu)$, and also symmetric w.r.t. the permutations of contravariant indices $(\rho, \sigma)$. It should be a sum of linearly independent terms, each with a manifest symmetry, and at most fourth order in $k_{\mu}$.
 
 [Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) jumps into the answer, which is a linear combination of
 
