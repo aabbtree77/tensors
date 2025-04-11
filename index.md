@@ -10,15 +10,15 @@ Donn G. Shankland shows how to do tensors/spinors and understand irreducibility 
 
 There are multiple related inequivalent definitions:
 
-* A vector of tensor product (dual) spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular book tries to reduce tensors to linear algebra by means of the Kronecker product and permutation matrices, which is, sadly, cumbersome and does not get far. 
+* A vector in the tensor product of vector spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular work tries to reduce tensors to matrices by means of lexical order, Kronecker's product, and permutation matrices.
 
-* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry and analysis while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility which is oddly tied to a linear invariant wave PDE system assuming a very restricted (artificial) form.
+* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility, but get sidetracked with "free particle" PDEs. None of this is tensor/spinor-proper (centric) enough.
 
-* A symbolic expression derived by combining certain primitives with certain rules. The primitives may or may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$, $R^{i}_{jkl}$... The books by [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
+* A symbolic expression derived by combining various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$, $R^{i}_{jkl}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
-To confuse one even further, consider the following exercise.
+To confuse one immediately, consider the following exercise.
 
-**Exercise 1.** Define the tensor product (dual) space which allows the index positioning freedom:
+**Exercise 1.** Define the tensor product of (dual) vector spaces which allows the index positioning freedom:
 
 $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
@@ -42,6 +42,8 @@ a^{i}\otimes b_{j} &= b_{j}\otimes a^{i}\,.
 $$
 
 It holds for any row-vector $a^{i}$ and column-vector $b_{j}$. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.
+
+After some thinking, I have abandoned any desire to reduce tensors to matrices. It is better to treat them symbolically.
 
 ## Shankland's Tensor Algebras
 
@@ -157,7 +159,7 @@ According to group theory, combining indices means taking "tensor products $(m,n
 
 - $(0,0)$: A scalar. Shankland's singlet: A single subspace with eigenvalue multiplicity $2\cdot 0+1=1$.
 
-- $(\frac{1}{2},\frac{1}{2})$: A single four-vector index. Shankland's singlet and triplet: two subspaces $0, 1$ with multiplicities 1 and 3.
+- $(\frac{1}{2},\frac{1}{2})$: A single four-vector index. Shankland's singlet and a triplet: two subspaces $0, 1$ with multiplicities 1 and 3.
 
 - $(\frac{1}{2},0)\oplus (0,\frac{1}{2})$: A full single spinor index. Shankland's doublet and its antidoublet: $\frac{1}{2},  \frac{1}{2}$ subspaces with multiplicites 2 and 2.
 
@@ -167,7 +169,7 @@ According to group theory, combining indices means taking "tensor products $(m,n
 
 - $(\frac{1}{2},\frac{1}{2}) \otimes \Big((\frac{1}{2},0)\oplus (0,\frac{1}{2})\Big)$, i.e. combining a vector and a spinor index?
 
-The last case, spin $\frac{3}{2})$, splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities 2 and 4, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
+The last case, spin $\frac{3}{2}$, splits into a spinor and $(1,\frac{1}{2}) \oplus (\frac{1}{2},1)$, clf. Weinberg's QFT, Vol. 1, page 232. The latter brings subspaces $\frac{1}{2}$ and $\frac{3}{2}$ with multiplicities 2 and 4, along with their "antisubspaces". All of this combined perfectly matches the result of Shankland.
 
 Note that the construction of algebras is skipped, but it is not trivial. For spin $\frac{3}{2}$, Shankland had to spot that the combination $\gamma_{\mu}p^{\mu}$ acted independently of $p$, $\gamma$, and $g$. This has effectively doubled the basis dimension of the vector-spinor algebra from 5 to 10.
 

@@ -46,16 +46,16 @@
 <p>There are multiple related inequivalent definitions:</p>
 
 <ul>
-<li><p>A vector of tensor product (dual) spaces defined over a field such as <span class="math inline">\(\Bbb{R}\)</span>, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular book tries to reduce tensors to linear algebra by means of the Kronecker product and permutation matrices, which is, sadly, cumbersome and does not get far.</p></li>
+<li><p>A vector in the tensor product of vector spaces defined over a field such as <span class="math inline">\(\Bbb{R}\)</span>, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular work tries to reduce tensors to matrices by means of lexical order, Kronecker&rsquo;s product, and permutation matrices.</p></li>
 
-<li><p>Anything that transforms like a tensor. A good book here is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry and analysis while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility which is oddly tied to a linear invariant wave PDE system assuming a very restricted (artificial) form.</p></li>
+<li><p>Anything that transforms like a tensor. A good book here is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility, but get sidetracked with &ldquo;free particle&rdquo; PDEs. None of this is tensor/spinor-proper (centric) enough.</p></li>
 
-<li><p>A symbolic expression derived by combining certain primitives with certain rules. The primitives may or may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>, <span class="math inline">\(R^{i}_{jkl}\)</span>&hellip; The books by <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p></li>
+<li><p>A symbolic expression derived by combining various primitives which may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>, <span class="math inline">\(R^{i}_{jkl}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p></li>
 </ul>
 
-<p>To confuse one even further, consider the following exercise.</p>
+<p>To confuse one immediately, consider the following exercise.</p>
 
-<p><strong>Exercise 1.</strong> Define the tensor product (dual) space which allows the index positioning freedom:</p>
+<p><strong>Exercise 1.</strong> Define the tensor product of (dual) vector spaces which allows the index positioning freedom:</p>
 <p><span class="math display">\[
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
 \]</span></p><p>Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
@@ -70,6 +70,8 @@ a^{i}\otimes b^{j} &amp;\neq b^{j}\otimes a^{i}\,,\\
 a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 \end{align}
 \]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.</p>
+
+<p>After some thinking, I have abandoned any desire to reduce tensors to matrices. It is better to treat them symbolically.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
@@ -162,7 +164,7 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 <ul>
 <li><p><span class="math inline">\((0,0)\)</span>: A scalar. Shankland&rsquo;s singlet: A single subspace with eigenvalue multiplicity <span class="math inline">\(2\cdot 0+1=1\)</span>.</p></li>
 
-<li><p><span class="math inline">\((\frac{1}{2},\frac{1}{2})\)</span>: A single four-vector index. Shankland&rsquo;s singlet and triplet: two subspaces <span class="math inline">\(0, 1\)</span> with multiplicities 1 and 3.</p></li>
+<li><p><span class="math inline">\((\frac{1}{2},\frac{1}{2})\)</span>: A single four-vector index. Shankland&rsquo;s singlet and a triplet: two subspaces <span class="math inline">\(0, 1\)</span> with multiplicities 1 and 3.</p></li>
 
 <li><p><span class="math inline">\((\frac{1}{2},0)\oplus (0,\frac{1}{2})\)</span>: A full single spinor index. Shankland&rsquo;s doublet and its antidoublet: <span class="math inline">\(\frac{1}{2},  \frac{1}{2}\)</span> subspaces with multiplicites 2 and 2.</p></li>
 
@@ -173,7 +175,7 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 <li><p><span class="math inline">\((\frac{1}{2},\frac{1}{2}) \otimes \Big((\frac{1}{2},0)\oplus (0,\frac{1}{2})\Big)\)</span>, i.e. combining a vector and a spinor index?</p></li>
 </ul>
 
-<p>The last case, spin <span class="math inline">\(\frac{3}{2})\)</span>, splits into a spinor and <span class="math inline">\((1,\frac{1}{2}) \oplus (\frac{1}{2},1)\)</span>, clf. Weinberg&rsquo;s QFT, Vol. 1, page 232. The latter brings subspaces <span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(\frac{3}{2}\)</span> with multiplicities 2 and 4, along with their &ldquo;antisubspaces&rdquo;. All of this combined perfectly matches the result of Shankland.</p>
+<p>The last case, spin <span class="math inline">\(\frac{3}{2}\)</span>, splits into a spinor and <span class="math inline">\((1,\frac{1}{2}) \oplus (\frac{1}{2},1)\)</span>, clf. Weinberg&rsquo;s QFT, Vol. 1, page 232. The latter brings subspaces <span class="math inline">\(\frac{1}{2}\)</span> and <span class="math inline">\(\frac{3}{2}\)</span> with multiplicities 2 and 4, along with their &ldquo;antisubspaces&rdquo;. All of this combined perfectly matches the result of Shankland.</p>
 
 <p>Note that the construction of algebras is skipped, but it is not trivial. For spin <span class="math inline">\(\frac{3}{2}\)</span>, Shankland had to spot that the combination <span class="math inline">\(\gamma_{\mu}p^{\mu}\)</span> acted independently of <span class="math inline">\(p\)</span>, <span class="math inline">\(\gamma\)</span>, and <span class="math inline">\(g\)</span>. This has effectively doubled the basis dimension of the vector-spinor algebra from 5 to 10.</p>
 
