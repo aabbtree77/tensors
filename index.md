@@ -4,31 +4,21 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-## Tensor Freedom
+Donn G. Shankland shows how to do tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his little-known work. 
 
-Tensors are confusing because there are multiple related inequivalent definitions:
+## Defining a Tensor
 
-* A vector of tensor product (dual) spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). The key property is that
+There are multiple related inequivalent definitions:
 
-    $$
-    X{^i}{^j}{_k} \neq X{^i}{_k}{^j} \neq X{_k}{^i}{^j}.
-    $$
+* A vector of tensor product (dual) spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular book tries to reduce tensors to linear algebra by means of the Kronecker product and permutation matrices, which is, sadly, cumbersome and does not get far. 
 
-    This approach tries to reduce tensors to linear algebra, but does not go very far.
+* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry and analysis while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility which is oddly tied to a linear invariant wave PDE system assuming a very restricted (artificial) form.
 
-* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The placement of indices is less stringent:
+* A symbolic expression derived by combining certain primitives with certain rules. The primitives may or may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$, $R^{i}_{jkl}$... The books by [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
-    $$
-    X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j} = X^{ij}_{k}.
-    $$
+To confuse one even further, consider the following exercise.
 
-    This is a historical approach, rushes to Riemann geometry and analysis while missing tensor algebras and invariants. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility which remains a rather obscure subject to me.
-
-* A symbolic expression derived by combining "primitives" which themselves may not be tensors (though they often are), e.g. the 4-vector $k$, the metric tensor $g$, the Levi-Civita symbol $\epsilon$, the Pauli matrices $\sigma$, the gamma matrices $\gamma$, the Dirac spinor $p$... The books by [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
-
-To confuse one even further, consider the following exercise which comes from my thinking about how to connect the first two approaches. It leads to multidimensional arrays represented as matrices. This is somewhat disconnected from the big ideas above, but it shows how the index positioning freedom may arise.
-
-**Exercise 1.** Define the tensor product (dual) space which does allow the index positioning freedom:
+**Exercise 1.** Define the tensor product (dual) space which allows the index positioning freedom:
 
 $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.

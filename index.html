@@ -39,27 +39,23 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-<h2>Tensor Freedom</h2>
+<p>Donn G. Shankland shows how to do tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his little-known work.</p>
 
-<p>Tensors are confusing because there are multiple related inequivalent definitions:</p>
+<h2>Defining a Tensor</h2>
+
+<p>There are multiple related inequivalent definitions:</p>
 
 <ul>
-<li><p>A vector of tensor product (dual) spaces defined over a field such as <span class="math inline">\(\Bbb{R}\)</span>, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. The key property is that</p>
-<p><span class="math display">\[
-X{^i}{^j}{_k} \neq X{^i}{_k}{^j} \neq X{_k}{^i}{^j}.
-\]</span></p><p>This approach tries to reduce tensors to linear algebra, but does not go very far.</p></li>
+<li><p>A vector of tensor product (dual) spaces defined over a field such as <span class="math inline">\(\Bbb{R}\)</span>, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular book tries to reduce tensors to linear algebra by means of the Kronecker product and permutation matrices, which is, sadly, cumbersome and does not get far.</p></li>
 
-<li><p>Anything that transforms like a tensor. A good book here is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. The placement of indices is less stringent:</p>
-<p><span class="math display">\[
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j} = X^{ij}_{k}.
-\]</span></p><p>This is a historical approach, rushes to Riemann geometry and analysis while missing tensor algebras and invariants. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility which remains a rather obscure subject to me.</p></li>
+<li><p>Anything that transforms like a tensor. A good book here is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry and analysis while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility which is oddly tied to a linear invariant wave PDE system assuming a very restricted (artificial) form.</p></li>
 
-<li><p>A symbolic expression derived by combining &ldquo;primitives&rdquo; which themselves may not be tensors (though they often are), e.g. the 4-vector <span class="math inline">\(k\)</span>, the metric tensor <span class="math inline">\(g\)</span>, the Levi-Civita symbol <span class="math inline">\(\epsilon\)</span>, the Pauli matrices <span class="math inline">\(\sigma\)</span>, the gamma matrices <span class="math inline">\(\gamma\)</span>, the Dirac spinor <span class="math inline">\(p\)</span>&hellip; The books by <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p></li>
+<li><p>A symbolic expression derived by combining certain primitives with certain rules. The primitives may or may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>, <span class="math inline">\(R^{i}_{jkl}\)</span>&hellip; The books by <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p></li>
 </ul>
 
-<p>To confuse one even further, consider the following exercise which comes from my thinking about how to connect the first two approaches. It leads to multidimensional arrays represented as matrices. This is somewhat disconnected from the big ideas above, but it shows how the index positioning freedom may arise.</p>
+<p>To confuse one even further, consider the following exercise.</p>
 
-<p><strong>Exercise 1.</strong> Define the tensor product (dual) space which does allow the index positioning freedom:</p>
+<p><strong>Exercise 1.</strong> Define the tensor product (dual) space which allows the index positioning freedom:</p>
 <p><span class="math display">\[
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
 \]</span></p><p>Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
