@@ -39,26 +39,28 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-<p>Donn G. Shankland shows how to do tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his little-known work.</p>
+<p>Donn G. Shankland shows how to define fields with tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his marvellous little-known work.</p>
 
 <h2>Defining a Tensor</h2>
 
 <p>There are multiple related inequivalent definitions:</p>
 
 <ul>
-<li><p>A vector in the tensor product of vector spaces defined over a field such as <span class="math inline">\(\Bbb{R}\)</span>, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular work tries to reduce tensors to matrices by means of lexical order, Kronecker&rsquo;s product, and permutation matrices.</p></li>
+<li><p>A vector in the tensor product of vector spaces, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular work also tries to reduce tensors to matrices by means of lexical order, Kronecker&rsquo;s product, and permutation matrices, but this is too good to be true.</p></li>
 
-<li><p>Anything that transforms like a tensor. A good book here is <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility, but get sidetracked with &ldquo;free particle&rdquo; PDEs. None of this is tensor/spinor-proper (centric) enough.</p></li>
+<li><p>Anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility. Amazing work, but top-down&hellip;</p></li>
 
-<li><p>A symbolic expression derived by combining various primitives which may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>, <span class="math inline">\(R^{i}_{jkl}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p></li>
+<li><p>A composition of various primitives which may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here. Or not.</p></li>
 </ul>
 
-<p>To confuse one immediately, consider the following exercise.</p>
+<p>To confuse one immediately, consider the following exercise/question.</p>
 
-<p><strong>Exercise 1.</strong> Define the tensor product of (dual) vector spaces which allows the index positioning freedom:</p>
+<p><strong>Exercise 1.</strong> Is it possible to have the index positioning ambiguity (freedom):</p>
 <p><span class="math display">\[
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
-\]</span></p><p>Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
+\]</span></p><p>What kind of symmetry/restriction is it?</p>
+
+<p>Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
@@ -71,7 +73,7 @@ a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 \end{align}
 \]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.</p>
 
-<p>After some thinking, I have abandoned any desire to reduce tensors to matrices. It is better to treat them symbolically.</p>
+<p>This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 

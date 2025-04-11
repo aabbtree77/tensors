@@ -4,25 +4,27 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to do tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his little-known work. 
+Donn G. Shankland shows how to define fields with tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his marvellous little-known work.
 
 ## Defining a Tensor
 
 There are multiple related inequivalent definitions:
 
-* A vector in the tensor product of vector spaces defined over a field such as $\Bbb{R}$, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular work tries to reduce tensors to matrices by means of lexical order, Kronecker's product, and permutation matrices.
+* A vector in the tensor product of vector spaces, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular work also tries to reduce tensors to matrices by means of lexical order, Kronecker's product, and permutation matrices, but this is too good to be true.
 
-* Anything that transforms like a tensor. A good book here is [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility, but get sidetracked with "free particle" PDEs. None of this is tensor/spinor-proper (centric) enough.
+* Anything that transforms like a tensor, see e.g. [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility. Amazing work, but top-down...
 
-* A symbolic expression derived by combining various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$, $R^{i}_{jkl}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
+* A composition of various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here. Or not.
 
-To confuse one immediately, consider the following exercise.
+To confuse one immediately, consider the following exercise/question.
 
-**Exercise 1.** Define the tensor product of (dual) vector spaces which allows the index positioning freedom:
+**Exercise 1.** Is it possible to have the index positioning ambiguity (freedom):
 
 $$
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}.
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
 $$
+
+What kind of symmetry/restriction is it?
 
 Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
 
@@ -43,7 +45,7 @@ $$
 
 It holds for any row-vector $a^{i}$ and column-vector $b_{j}$. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.
 
-After some thinking, I have abandoned any desire to reduce tensors to matrices. It is better to treat them symbolically.
+This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
 
 ## Shankland's Tensor Algebras
 
