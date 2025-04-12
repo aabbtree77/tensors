@@ -39,41 +39,41 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-<p>Donn G. Shankland shows how to define tensor-spinor fields and understand their spin content (irreducibility). These are my notes taken while reading his marvellous little-known work. It is a higher spin field theory which is an alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms.</p>
+<p>Donn G. Shankland shows how to define tensor fields and their spin content (irreducibility). It is a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms.</p>
 
 <h2>Defining a Tensor</h2>
 
 <p>There are multiple related inequivalent definitions:</p>
 
 <ul>
-<li><p>A vector in the tensor product of vector spaces, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>. This particular work also tries to reduce tensors to matrices by means of lexical order, Kronecker&rsquo;s product, and permutation matrices, but this is too good to be true.</p></li>
+<li><p>A vector in the tensor product of vector spaces, see e.g. <a href="https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&amp;redir_esc=y">Ruíz-Tolosa and Castillo (2005)</a>, <a href="https://www.goodreads.com/work/editions/243535804-tensor-algebra-and-tensor-analysis-for-engineers-with-applications-to-c">Itskov (2025)</a>.</p></li>
 
-<li><p>Anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Schaum&rsquo;s Tensor Calculus by David C. Kay (1988)</a>. This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a> go deeper into irreducibility. Amazing work, but top-down&hellip;</p></li>
+<li><p>Anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Kay (1988)</a>, <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a>.</p></li>
 
-<li><p>A composition of various primitives which may not be tensors: <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some very dim light here.</p></li>
+<li><p>A composition of various primitives such as <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some very dim light here.</p></li>
 </ul>
 
-<p>To confuse one immediately, consider the following exercise/question.</p>
+<p>To confuse one further, here is yet another definition with one nontrivial consequence.</p>
 
-<p><strong>Exercise 1.</strong> Is it possible to have the index positioning freedom:</p>
-<p><span class="math display">\[
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
-\]</span></p><p>What kind of symmetry/restriction would that be?</p>
-
-<p>Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
+<p>Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
-\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a unit row-vector, and <span class="math inline">\(e_{k}\)</span> is a unit column-vector. Note the property:</p>
+\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a unit row-vector, and <span class="math inline">\(e_{k}\)</span> is a unit column-vector. Note the property of the Kronecker product:</p>
 <p><span class="math display">\[
 \begin{align}
 a^{i}\otimes b^{j} &amp;\neq b^{j}\otimes a^{i}\,,\\
 a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 \end{align}
-\]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.</p>
+\]</span></p><p>It holds for any row-vector <span class="math inline">\(a^{i}\)</span> and column-vector <span class="math inline">\(b_{j}\)</span>.</p>
 
-<p>This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
+<p>One can now see that this allows to shift sub and superscript indices while maintaining their type and the order within the type group. In other words, it is possible to have the index positioning freedom:</p>
+<p><span class="math display">\[
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
+\]</span></p><p>What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization.</p>
+
+<p>This rushed reduction of tensors to matrices also obfuscates index contractions, and the basis always feels like an extra baggage. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
@@ -96,7 +96,7 @@ X_{6} &amp; = \frac{1}{k^2} k_{(\mu} {g_{\nu)}}^{(\rho} k^{\sigma)}\,.
 A\, B \equiv {A_{\mu \nu}}^{\alpha \beta} {B_{\alpha \beta}}^{\rho \sigma}\,,
 \]</span></p><p>with the implied summation over repeated indices.</p>
 
-<p><strong>Exercise 2.</strong> Show that</p>
+<p><strong>Exercise 1.</strong> Show that</p>
 <p><span class="math display">\[
 X_{6} X_{6} = 8 X_{5} + 2 X_{6},
 \]</span></p><p>which is not <span class="math inline">\(8 X_{4} + 2 X_{6}\)</span> stated by <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a>.</p>
@@ -157,7 +157,7 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 
 <p>Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with &ldquo;t&rdquo;), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition for spin 1 (Lorenz without &ldquo;t&rdquo;).</p>
 
-<p><strong>Exercise 3.</strong> Verify Shankland&rsquo;s spectral results, esp. the case with one vector and one spinor index: &ldquo;&hellip; we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets.&rdquo;</p>
+<p><strong>Exercise 2.</strong> Verify Shankland&rsquo;s spectral results, esp. the case with one vector and one spinor index: &ldquo;&hellip; we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets.&rdquo;</p>
 
 <p>Hint:</p>
 
@@ -189,9 +189,9 @@ t_{1} &amp; = k_{\mu} {g_{\nu}}^{\alpha} k^{\beta} \cdot k_{\alpha} {g_{\beta}}^
 
 <h2>Why Shankland?</h2>
 
-<p>To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field, to build invariant physics later on. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to &ldquo;apesanteur&rdquo; <span class="math inline">\(A\)</span> aka vector potential.</p>
+<p>To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to &ldquo;apesanteur&rdquo; <span class="math inline">\(A\)</span> aka vector potential.</p>
 
-<p>Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg&hellip; Shankland&rsquo;s system is the most open, inviting, and unknown&hellip;</p>
+<p>Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg&hellip; Shankland&rsquo;s system is the most open and inviting.</p>
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>

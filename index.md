@@ -4,29 +4,21 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to define tensor-spinor fields and understand their spin content (irreducibility). These are my notes taken while reading his marvellous little-known work. It is a higher spin field theory which is an alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. 
+Donn G. Shankland shows how to define tensor fields and their spin content (irreducibility). It is a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. 
 
 ## Defining a Tensor
 
 There are multiple related inequivalent definitions:
 
-* A vector in the tensor product of vector spaces, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y). This particular work also tries to reduce tensors to matrices by means of lexical order, Kronecker's product, and permutation matrices, but this is too good to be true.
+* A vector in the tensor product of vector spaces, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y), [Itskov (2025)](https://www.goodreads.com/work/editions/243535804-tensor-algebra-and-tensor-analysis-for-engineers-with-applications-to-c).
 
-* Anything that transforms like a tensor, see e.g. [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility. Amazing work, but top-down...
+* Anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf), [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/).
 
-* A composition of various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some very dim light here.
+* A composition of various primitives such as $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some very dim light here.
 
-To confuse one immediately, consider the following exercise/question.
+To confuse one further, here is yet another definition with one nontrivial consequence.
 
-**Exercise 1.** Is it possible to have the index positioning freedom:
-
-$$
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
-$$
-
-What kind of symmetry/restriction would that be?
-
-Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
+Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
 
 $$
 \begin{align}
@@ -34,7 +26,7 @@ X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
 $$
 
-where $c_{ijk}$ are some constants. Assume that $e^{i}$ is a unit row-vector, and $e_{k}$ is a unit column-vector. Note the property:
+where $c_{ijk}$ are some constants. Assume that $e^{i}$ is a unit row-vector, and $e_{k}$ is a unit column-vector. Note the property of the Kronecker product:
 
 $$
 \begin{align}
@@ -43,9 +35,17 @@ a^{i}\otimes b_{j} &= b_{j}\otimes a^{i}\,.
 \end{align}
 $$
 
-It holds for any row-vector $a^{i}$ and column-vector $b_{j}$. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.
+It holds for any row-vector $a^{i}$ and column-vector $b_{j}$.  
 
-This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
+One can now see that this allows to shift sub and superscript indices while maintaining their type and the order within the type group. In other words, it is possible to have the index positioning freedom:
+
+$$
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
+$$
+
+What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. 
+
+This rushed reduction of tensors to matrices also obfuscates index contractions, and the basis always feels like an extra baggage. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
 
 ## Shankland's Tensor Algebras
 
@@ -74,7 +74,7 @@ $$
 
 with the implied summation over repeated indices.
 
-**Exercise 2.** Show that
+**Exercise 1.** Show that
 
 $$
 X_{6} X_{6} = 8 X_{5} + 2 X_{6},
@@ -153,7 +153,7 @@ There is no need to know these values when getting the product tables $X_{i}X_{j
 
 Mysteriously, the eigenvalues will have multiplicities which can be deduced independently from the Lorentz group theory (Lorentz with "t"), without any iterations and polynomial equations. The group theory alone, however, will not get us to the eigenvector equations leading to the Lorenz gauge condition for spin 1 (Lorenz without "t").
 
-**Exercise 3.** Verify Shankland's spectral results, esp. the case with one vector and one spinor index: "... we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets."
+**Exercise 2.** Verify Shankland's spectral results, esp. the case with one vector and one spinor index: "... we find, together with their antiparticles, the following groups of particles: a quadruplet, and two doublets."
 
 Hint:
 
@@ -183,9 +183,9 @@ It is tough to read this literature, and the results may not always justify the 
 
 ## Why Shankland?
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field, to build invariant physics later on. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... Shankland's system is the most open, inviting, and unknown...
+Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... Shankland's system is the most open and inviting.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
