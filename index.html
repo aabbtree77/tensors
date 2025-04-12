@@ -50,12 +50,12 @@
 
 <li><p>Anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Kay (1988)</a>, <a href="https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/">Gelfand et al. (1963)</a>.</p></li>
 
-<li><p>A composition of various primitives such as <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some very dim light here.</p></li>
+<li><p>A composition of various primitives such as <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed a dim light here.</p></li>
 </ul>
 
 <p>To confuse one further, here is yet another definition with one nontrivial consequence.</p>
 
-<p>Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:</p>
+<p>Define a tensor as a weighted sum of the Kronecker products of the basis vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
@@ -70,10 +70,10 @@ a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 
 <p>One can now see that this allows to shift sub and superscript indices while maintaining their type and the order within the type group. In other words, it is possible to have the index positioning freedom:</p>
 <p><span class="math display">\[
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
-\]</span></p><p>What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization.</p>
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
+\]</span></p><p>What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. It is not entirely clear what kind of object we get here.</p>
 
-<p>This rushed reduction of tensors to matrices also obfuscates index contractions, and the basis always feels like an extra baggage. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
+<p>Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
@@ -89,7 +89,7 @@ X_{4} &amp; = \frac{1}{k^2} k_{\mu} k_{\nu} g^{\rho \sigma}\,, \\
 X_{5} &amp; = \frac{1}{k^4} k_{\mu} k_{\nu} k^{\rho} k^{\sigma}\,, \\
 X_{6} &amp; = \frac{1}{k^2} k_{(\mu} {g_{\nu)}}^{(\rho} k^{\sigma)}\,.
 \end{align}
-\]</span></p><p>Here the division by 4 of the first basis element is not important, but it turns <span class="math inline">\(X_{1}\)</span> into an index symmetrization operator if one acts with it on any two-index tensor.</p>
+\]</span></p><p>Here the division by 4 of the first basis element is not important, but it turns <span class="math inline">\(X_{1}\)</span> into a proper index symmetrization operator <span class="math inline">\(()\)</span> if one acts with it on any two-index tensor. Note that in <a href="https://aapt.scitation.org/doi/10.1119/1.1976018">Shankland (1970)</a> symmetrization and antisymmetrization is not scaled.</p>
 
 <p><strong>Magically, these tensor basis expressions form an algebra under the product defined as</strong></p>
 <p><span class="math display">\[

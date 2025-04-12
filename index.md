@@ -14,11 +14,11 @@ There are multiple related inequivalent definitions:
 
 * Anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf), [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/).
 
-* A composition of various primitives such as $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some very dim light here.
+* A composition of various primitives such as $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed a dim light here.
 
 To confuse one further, here is yet another definition with one nontrivial consequence.
 
-Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
+Define a tensor as a weighted sum of the Kronecker products of the basis vectors:
 
 $$
 \begin{align}
@@ -40,12 +40,12 @@ It holds for any row-vector $a^{i}$ and column-vector $b_{j}$.
 One can now see that this allows to shift sub and superscript indices while maintaining their type and the order within the type group. In other words, it is possible to have the index positioning freedom:
 
 $$
-X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
+X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
 $$
 
-What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. 
+What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. It is not entirely clear what kind of object we get here.
 
-This rushed reduction of tensors to matrices also obfuscates index contractions, and the basis always feels like an extra baggage. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
+Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
 
 ## Shankland's Tensor Algebras
 
@@ -64,7 +64,7 @@ X_{6} & = \frac{1}{k^2} k_{(\mu} {g_{\nu)}}^{(\rho} k^{\sigma)}\,.
 \end{align}
 $$
 
-Here the division by 4 of the first basis element is not important, but it turns $X_{1}$ into an index symmetrization operator if one acts with it on any two-index tensor.
+Here the division by 4 of the first basis element is not important, but it turns $X_{1}$ into a proper index symmetrization operator $()$ if one acts with it on any two-index tensor. Note that in [Shankland (1970)](https://aapt.scitation.org/doi/10.1119/1.1976018) symmetrization and antisymmetrization is not scaled.
 
 **Magically, these tensor basis expressions form an algebra under the product defined as**
 
