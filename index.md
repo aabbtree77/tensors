@@ -4,7 +4,7 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to define fields with tensors/spinors and understand irreducibility (spin). These are my notes taken while reading his marvellous little-known work.
+Donn G. Shankland shows how to define tensor-spinor fields and understand their spin content (irreducibility). These are my notes taken while reading his marvellous little-known work. It is a higher spin field theory which is an alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. 
 
 ## Defining a Tensor
 
@@ -14,17 +14,17 @@ There are multiple related inequivalent definitions:
 
 * Anything that transforms like a tensor, see e.g. [Schaum's Tensor Calculus by David C. Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). This historical approach rushes to Riemann geometry while missing tensor algebras, invariants, irreducibility. [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/) go deeper into irreducibility. Amazing work, but top-down...
 
-* A composition of various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here. Or not.
+* A composition of various primitives which may not be tensors: $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some very dim light here.
 
 To confuse one immediately, consider the following exercise/question.
 
-**Exercise 1.** Is it possible to have the index positioning ambiguity (freedom):
+**Exercise 1.** Is it possible to have the index positioning freedom:
 
 $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,?
 $$
 
-What kind of symmetry/restriction is it?
+What kind of symmetry/restriction would that be?
 
 Hint: Define a vector (tensor) as a weighted sum of the Kronecker products of the basis vectors:
 
@@ -45,7 +45,7 @@ $$
 
 It holds for any row-vector $a^{i}$ and column-vector $b_{j}$. Verify now that this allows to shift sub and superscript indices while maintaining their type and the order within the type group.
 
-This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
+This raises too many further questions, and it thus makes sense to abandon reductionism and treating tensors as matrices/operators. Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
 
 ## Shankland's Tensor Algebras
 
@@ -183,9 +183,9 @@ It is tough to read this literature, and the results may not always justify the 
 
 ## Why Shankland?
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form for the field, which in turn may serve later in building invariant physics. A spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field, to build invariant physics later on. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, and Weinberg... Shankland's system is the closest thing to the assembly language of nature.
+Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... Shankland's system is the most open, inviting, and unknown...
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
