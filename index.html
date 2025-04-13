@@ -53,14 +53,16 @@
 <li><p>A composition of various primitives such as <span class="math inline">\(k_{i}\)</span>, <span class="math inline">\(g_{ij}\)</span>, <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{i}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed a dim light here.</p></li>
 </ul>
 
-<p>To confuse one further, here is yet another definition with one nontrivial consequence.</p>
+<p>Here is yet another approach, with one nontrivial consequence.</p>
 
-<p>Define a tensor as a weighted sum of the Kronecker products of the basis vectors:</p>
+<p>Define a tensor as a weighted sum of the Kronecker product of vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
-\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a unit row-vector, and <span class="math inline">\(e_{k}\)</span> is a unit column-vector. Note the property of the Kronecker product:</p>
+\]</span></p><p>where <span class="math inline">\(c_{ijk}\)</span> are some constants. Assume that <span class="math inline">\(e^{i}\)</span> is a row-vector, and <span class="math inline">\(e_{k}\)</span> is a column-vector. They need not be unit vectors, may not form a basis.</p>
+
+<p>Note the property of the Kronecker product:</p>
 <p><span class="math display">\[
 \begin{align}
 a^{i}\otimes b^{j} &amp;\neq b^{j}\otimes a^{i}\,,\\
@@ -71,9 +73,9 @@ a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 <p>One can now see that this allows to shift sub and superscript indices while maintaining their type and the order within the type group. In other words, it is possible to have the index positioning freedom:</p>
 <p><span class="math display">\[
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
-\]</span></p><p>What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. It is not entirely clear what kind of object we get here.</p>
+\]</span></p><p>What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization.</p>
 
-<p>Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland&rsquo;s ingenuity.</p>
+<p>It makes sense to focus on the third way. Gather what you know about the specific primitives with their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 

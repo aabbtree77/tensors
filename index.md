@@ -16,9 +16,9 @@ There are multiple related inequivalent definitions:
 
 * A composition of various primitives such as $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed a dim light here.
 
-To confuse one further, here is yet another definition with one nontrivial consequence.
+Here is yet another approach, with one nontrivial consequence.
 
-Define a tensor as a weighted sum of the Kronecker products of the basis vectors:
+Define a tensor as a weighted sum of the Kronecker product of vectors:
 
 $$
 \begin{align}
@@ -26,7 +26,9 @@ X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
 $$
 
-where $c_{ijk}$ are some constants. Assume that $e^{i}$ is a unit row-vector, and $e_{k}$ is a unit column-vector. Note the property of the Kronecker product:
+where $c_{ijk}$ are some constants. Assume that $e^{i}$ is a row-vector, and $e_{k}$ is a column-vector. They need not be unit vectors, may not form a basis.
+
+Note the property of the Kronecker product:
 
 $$
 \begin{align}
@@ -43,9 +45,9 @@ $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
 $$
 
-What kind of symmetry/restriction is that? It is neither tied to coordinate transformations, nor index symmetrization. It is not entirely clear what kind of object we get here.
+What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization.
 
-Instead, it is better to focus on specific tensors, spinors, and other primitives, list all their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra and spectral analysis, thanks to Donn G. Shankland's ingenuity.
+It makes sense to focus on the third way. Gather what you know about the specific primitives with their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra.
 
 ## Shankland's Tensor Algebras
 
