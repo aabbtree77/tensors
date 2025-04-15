@@ -4,25 +4,25 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to define tensor fields and their spin content (irreducibility). It is a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. 
+Donn G. Shankland shows how to define tensor fields and their spin content. He provides a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. A good thing about Shankland's theory is that it does not mix tensors and spinors with operators, matrices, and group theory.
 
 ## Defining a Tensor
 
-There are multiple related inequivalent definitions:
+A tensor is anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products. I repeat, the trick is not to sit on two chairs at the same time (Bourbaki vs physics).
 
-* A vector in the tensor product of vector spaces, see e.g. [Ruíz-Tolosa and Castillo (2005)](https://books.google.lt/books/about/From_Vectors_to_Tensors.html?id=vgGQUrQMzwYC&redir_esc=y), [Itskov (2025)](https://www.goodreads.com/work/editions/243535804-tensor-algebra-and-tensor-analysis-for-engineers-with-applications-to-c).
+Instead of columns and rows, we have contravariant and covariant indices connected with the index raising with the metric tensor.
 
-* Anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf), [Gelfand et al. (1963)](https://www.abebooks.co.uk/book-search/title/representations-rotation-lorentz-groups/author/gelfand-minlos/first-edition/).
+The metric tensor is a quadratic form for the infinitesimal displacements. One can also see it as something that takes two vectors and outputs a number, or the structure with two vector slots. Setting one slot to a vector produces a covector, i.e. the ability to lower the index. 
 
-* A composition of various primitives such as $k_{i}$, $g_{ij}$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{i}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed a dim light here.
+Another very tricky thing is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
-Here is yet another approach, with one nontrivial consequence.
+## [Never Mind the Kronecker](https://www.amazon.com/Never-Mind-Beethoven-Vol-1/dp/B00008ENM4)
 
-Define a tensor as a weighted sum of the Kronecker product of vectors:
+Reductionism to matrices is counter-productive. It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:
 
 $$
 \begin{align}
-X{^i}{^j}{_k}\equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
+X \equiv \{X{^i}{^j}{_k}\} \equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
 \end{align}
 $$
 
@@ -45,9 +45,9 @@ $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
 $$
 
-What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization.
+What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization. Does this property hold if we change the coordinate system, e.g. after we multiply the e-vectors with some T and its inverse where needed? T will likely have to be restricted to be orthogonal. It is also not clear how to introduce a metric since index raising/lowering is a transposition not tied to a quadratic form. Rows/columns, transposition, Kronecker products, all of them become confusing and extraneous.
 
-It makes sense to focus on the third way. Gather what you know about the specific primitives with their properties first, then attempt to compose, proceed bottom-up. Remarkably, this also leads to linear algebra.
+Remarkably, we can still get into linear algebra with proper tensors without a reduction/specialization.
 
 ## Shankland's Tensor Algebras
 
