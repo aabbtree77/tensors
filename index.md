@@ -4,21 +4,21 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to define tensor fields and their spin content. He provides a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. A good thing about Shankland's theory is that it does not mix tensors and spinors with operators, matrices, and group theory.
+Donn G. Shankland shows how to define tensor fields and their spin content. He provides a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. A strong feature of Shankland's theory is that it does not mix tensors and spinors with operators, matrices, and group theory.
 
 ## Defining a Tensor
 
-A tensor is anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products. I repeat, the trick is not to sit on two chairs at the same time (Bourbaki vs physics).
+A tensor is anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products, wedge products, differential forms... I repeat, the trick is not to sit on several chairs at the same time.
 
 Instead of columns and rows, we have contravariant and covariant indices connected with the index raising with the metric tensor.
 
-The metric tensor is a quadratic form for the infinitesimal displacements. One can also see it as something that takes two vectors and outputs a number, or the structure with two vector slots. Setting one slot to a vector produces a covector, i.e. the ability to lower the index. 
+The metric tensor is a quadratic form for the infinitesimal displacements. One can also see it as something that takes two vectors and outputs a number. Moreover, it is the structure with two vector slots. Setting one slot to a vector and leaving the other empty produces a covector, i.e. the ability to lower the index. 
 
-Another very tricky thing is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
+Another very tricky moment is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
 ## [Never Mind the Kronecker](https://www.amazon.com/Never-Mind-Beethoven-Vol-1/dp/B00008ENM4)
 
-Reductionism to matrices is counter-productive. It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:
+Unlearning is essential. Reductionism to matrices is counter-productive. It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:
 
 $$
 \begin{align}
@@ -45,7 +45,7 @@ $$
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
 $$
 
-What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization. Does this property hold if we change the coordinate system, e.g. after we multiply the e-vectors with some T and its inverse where needed? T will likely have to be restricted to be orthogonal. It is also not clear how to introduce a metric since index raising/lowering is a transposition not tied to a quadratic form. Rows/columns, transposition, Kronecker products, all of them become confusing and extraneous.
+What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization. Does this property hold if we change the coordinate system, e.g. after we multiply the e-vectors with some T and its inverse where needed? T will likely have to be restricted/special if existing at all. It is also not clear how to introduce a metric since index raising/lowering is a transposition not tied to a quadratic form. Rows/columns, transposition, Kronecker products, all of them become confusing and extraneous.
 
 Remarkably, we can still get into linear algebra with proper tensors without a reduction/specialization.
 
@@ -185,9 +185,9 @@ It is tough to read this literature, and the results may not always justify the 
 
 ## Why Shankland?
 
-To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant operator is then constructed. It may serve as a quadratic form operator for the field. The spin content of the field is discovered as the eigenvalue multiplicities of that operator. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
+To sum up, we are given a field with tensor/spinor indices and their permutation symmetries. A Lorentz-invariant tensor is then constructed. It may serve as a quadratic form for the field. The spin content of the field is discovered as the eigenvalue multiplicities of the tensor. One test of this formalism confirms that removing spin 0 from a vector field leads to "apesanteur" $A$ aka vector potential.
 
-Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... Shankland's system is the most open and inviting.
+Considering the vast literature on group theory, irreducible representations, angular momentum, higher-spin field theories, spin projection operators, tensors, spinors, Weyl, Wigner, Weinberg... Shankland's system is the most tensor-spinor centric and bottom-up. The downside is that we are building a quadratic form which demands twice as many indices as the field itself. Ideally, it would be nicer to build a scalar/cost function and get into quadratic forms via some gradient operation.
 
 <div class="imgcontainer">
 <a style="font-size: 1.5rem;" href="https://youtu.be/Y183gJQ9yCY?t=20">Sign the contract big boy...</a>
