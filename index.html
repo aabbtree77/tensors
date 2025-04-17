@@ -43,7 +43,7 @@
 
 <h2>Defining a Tensor</h2>
 
-<p>A tensor is anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Kay (1988)</a>. The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products, wedge products, differential forms&hellip; I repeat, the trick is not to sit on several chairs at the same time.</p>
+<p>A tensor is anything that transforms like a tensor, see e.g. <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Kay (1988)</a>. The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products, differential forms, nabla (vector analysis), Fourier analysis/special functions, Lie algebras&hellip; It demands quite a backtracking.</p>
 
 <p>Instead of columns and rows, we have contravariant and covariant indices connected with the index raising with the metric tensor.</p>
 
@@ -51,9 +51,13 @@
 
 <p>Another very tricky moment is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: <span class="math inline">\(\epsilon_{ijkl}\)</span>, <span class="math inline">\(\sigma_{i}\)</span>, <span class="math inline">\(\gamma_{i}\)</span>, <span class="math inline">\(p_{\alpha}\)</span>, <span class="math inline">\(\partial_{ij}\)</span>, <span class="math inline">\(A_{i}\)</span>, <span class="math inline">\(\Gamma_{ijk}\)</span>&hellip; <a href="https://archive.org/details/bwb_KS-459-263">G. B. Gurevich (1964)</a> and <a href="https://birdtracks.eu/PUPlink.htm">P. Cvitanovic (2008)</a> may shed some dim light here.</p>
 
+<p>A canonical example is a partial derivative of a vector. Both are tensors (vectors), but the application of the former to the latter is not a tensor, see <a href="https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf">Kay (1988)</a>.</p>
+
 <h2><a href="https://www.amazon.com/Never-Mind-Beethoven-Vol-1/dp/B00008ENM4">Never Mind the Kronecker</a></h2>
 
-<p>Unlearning is essential. Reductionism to matrices is counter-productive. It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:</p>
+<p>Unlearning is essential. Reductionism to matrices is counter-productive.</p>
+
+<p>It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:</p>
 <p><span class="math display">\[
 \begin{align}
 X \equiv \{X{^i}{^j}{_k}\} \equiv \sum_{ijk}\,c_{ijk}\,e^{i}\otimes e^{j}\otimes e_{k}\,,
@@ -73,7 +77,7 @@ a^{i}\otimes b_{j} &amp;= b_{j}\otimes a^{i}\,.
 X{^i}{^j}{_k} = X{^i}{_k}{^j} = X{_k}{^i}{^j}\,.
 \]</span></p><p>What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization. Does this property hold if we change the coordinate system, e.g. after we multiply the e-vectors with some T and its inverse where needed? T will likely have to be restricted/special if existing at all. It is also not clear how to introduce a metric since index raising/lowering is a transposition not tied to a quadratic form. Rows/columns, transposition, Kronecker products, all of them become confusing and extraneous.</p>
 
-<p>Remarkably, we can still get into linear algebra with proper tensors without a reduction/specialization.</p>
+<p>Remarkably, we can still retain some of the best pieces of linear algebra (the eigenvalue decomposition) with proper tensors without a reduction/specialization.</p>
 
 <h2>Shankland&rsquo;s Tensor Algebras</h2>
 
