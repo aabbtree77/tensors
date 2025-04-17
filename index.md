@@ -8,7 +8,7 @@ Donn G. Shankland shows how to define tensor fields and their spin content. He p
 
 ## Defining a Tensor
 
-A tensor is anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products, wedge products, differential forms... I repeat, the trick is not to sit on several chairs at the same time.
+A tensor is anything that transforms like a tensor, see e.g. [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf). The main thing about tensors is that one must unlearn linear and multilinear algebra. One must forget about column and row vectors, transposes, matrices, Kronecker products, differential forms, nabla (vector analysis), Fourier analysis/special functions, Lie algebras... It demands quite a backtracking.
 
 Instead of columns and rows, we have contravariant and covariant indices connected with the index raising with the metric tensor.
 
@@ -16,9 +16,13 @@ The metric tensor is a quadratic form for the infinitesimal displacements. One c
 
 Another very tricky moment is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
+A canonical example is a partial derivative of a vector. Both are tensors (vectors), but the application of the former to the latter is not a tensor, see [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf).
+
 ## [Never Mind the Kronecker](https://www.amazon.com/Never-Mind-Beethoven-Vol-1/dp/B00008ENM4)
 
-Unlearning is essential. Reductionism to matrices is counter-productive. It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:
+Unlearning is essential. Reductionism to matrices is counter-productive. 
+
+It is tempting to define a tensor as a weighted sum of the Kronecker product of vectors:
 
 $$
 \begin{align}
@@ -47,7 +51,7 @@ $$
 
 What kind of symmetry is that? It is neither tied to coordinate transformations, nor index symmetrization. Does this property hold if we change the coordinate system, e.g. after we multiply the e-vectors with some T and its inverse where needed? T will likely have to be restricted/special if existing at all. It is also not clear how to introduce a metric since index raising/lowering is a transposition not tied to a quadratic form. Rows/columns, transposition, Kronecker products, all of them become confusing and extraneous.
 
-Remarkably, we can still get into linear algebra with proper tensors without a reduction/specialization.
+Remarkably, we can still retain some of the best pieces of linear algebra (the eigenvalue decomposition) with proper tensors without a reduction/specialization.
 
 ## Shankland's Tensor Algebras
 
