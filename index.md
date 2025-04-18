@@ -4,7 +4,7 @@
     <div style="font-size: 1rem; margin-top: 1rem; margin-bottom: 1rem;">Last Update: April 12, 2025</div>
 </div>
 
-Donn G. Shankland shows how to define tensor fields and their spin content. He provides a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg, and other formalisms. A strong feature of Shankland's theory is that it does not mix tensors and spinors with operators, matrices, and group theory.
+Donn G. Shankland shows how to define tensor fields and their spin content. He provides a higher-spin field theory alternative to the Fierz - Pauli, Bargmann - Wigner, Gelfand, Joos - Weinberg - Jefferey - Ahluwalia, and other formalisms. A serious advantage of Shankland's theory is that it does not mix tensors and spinors with matrices and group theory.
 
 ## Defining a Tensor
 
@@ -14,7 +14,7 @@ Instead of columns and rows, we have contravariant and covariant indices connect
 
 The metric tensor is a quadratic form for the infinitesimal displacements. One can also see it as something that takes two vectors and outputs a number. Moreover, it is the structure with two vector slots. Setting one slot to a vector and leaving the other empty produces a covector, i.e. the ability to lower the index. 
 
-Another very tricky moment is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
+Another very tricky moment is that one can compose tensors with non-tensors to obtain new tensors. Nobody knows what these primitives are as they come from different places: $\Box$, $\epsilon_{ijkl}$, $\sigma_{i}$, $\gamma_{i}$, $p_{\alpha}$, $\partial_{ij}$, $A_{i}$, $\Gamma_{ijk}$... including spinors, spin connections, tetrads, projection operators, currents, Lie algebra generators, gauge fields. [G. B. Gurevich (1964)](https://archive.org/details/bwb_KS-459-263) and [P. Cvitanovic (2008)](https://birdtracks.eu/PUPlink.htm) may shed some dim light here.
 
 A canonical example is a partial derivative of a vector. Both are tensors (vectors), but the application of the former to the latter is not a tensor, see [Kay (1988)](https://kishorekoduvayur.wordpress.com/wp-content/uploads/2017/12/schaums-tensor-calculus-238.pdf).
 
