@@ -6,6 +6,8 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;  /* Ensures full viewport height */
+    overflow-x: hidden;  /* Prevents horizontal scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +30,8 @@ body {
     width: 50%;
     color: #949fa6;
     margin-bottom: 1.6rem;
+    overflow-wrap: anywhere;  /* Breaks long words at any point */
+    word-break: break-word;   /* Ensures compatibility */
 }
 
 h1 {
@@ -58,5 +62,17 @@ a {
     /*height: auto;*/
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 1024px) { /* Tablet */
+  .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile */
+  .content {
+    width: 90%;
+  }
 }
 
